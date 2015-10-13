@@ -10,7 +10,7 @@ namespace EntityFirstApp
     {
         static void Main(string[] args)
         {
-
+            asdf
         }
     }
 }
