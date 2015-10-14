@@ -10,7 +10,11 @@ namespace EntityFirstApp
     {
         static void Main(string[] args)
         {
-            asdf
+            Console.WriteLine("Hello World");
+            using (var ctx = new EFDbContext())
+            {
+                ctx.SaveChanges();
+            }
         }
     }
 }
