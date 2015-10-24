@@ -6,25 +6,30 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
 namespace EntityFirstApp.Mapping
 {
-    public class UserMap : EntityTypeConfiguration<User>
+    public class ProfileMap : EntityTypeConfiguration<Profile>
     {
-        public UserMap()
+        public ProfileMap()
         {
-            //Key  
-            HasKey(t => t.ID);
+            //key  
+            this.HasKey(t => t.ID);
 
-            //Field
-            Property(t => t.ID).HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity);
-            Property(t => t.UserName).IsRequired().HasMaxLength(25);
-            Property(t => t.Email).IsRequired();
-            Property(t => t.AddedDate).IsRequired();
-            Property(t => t.ModifiedDate).IsRequired();
-            Property(t => t.IP);
+            //fields  
+            this.Property(t => t.FirstName);
+            this.Property(t => t.LastName);
+            this.Property(t => t.Address).HasMaxLength(100).HasColumnType("nvarchar");
+            this.Property(t => t.AddedDate);
+            this.Property(t => t.ModifiedDate);
+            this.Property(t => t.IP);
 
             //table  
-            ToTable("Users");
+            ToTable("UserProfiles");
+
+            //Relationship
+            this.HasRequired(t => t.User).WithRequiredDependent(u => u.Profile);
         }
     }
 }
+

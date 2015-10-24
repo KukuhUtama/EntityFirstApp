@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Data.Entity.ModelConfiguration;
 using System.Linq;
 using System.Text;
@@ -7,26 +8,24 @@ using System.Threading.Tasks;
 
 namespace EntityFirstApp.Mapping
 {
-    public class ProfileMap : EntityTypeConfiguration<Profile>
+    public class UserMap : EntityTypeConfiguration<User>
     {
-        public ProfileMap()
+        public UserMap()
         {
-            //key  
-            this.HasKey(t => t.ID);
+            //Key  
+            HasKey(t => t.ID);
 
-            //fields  
-            this.Property(t => t.FirstName);
-            this.Property(t => t.LastName);
-            this.Property(t => t.Address).HasMaxLength(100).HasColumnType("nvarchar");
-            this.Property(t => t.AddedDate);
-            this.Property(t => t.ModifiedDate);
-            this.Property(t => t.IP);
+            //Field
+            Property(t => t.ID).HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity);
+            Property(t => t.UserName).IsRequired().HasMaxLength(25);
+            Property(t => t.Email).IsRequired();
+            Property(t => t.AddedDate).IsRequired();
+            Property(t => t.ModifiedDate).IsRequired();
+            Property(t => t.IP);
 
-            //table  
-            ToTable("UserProfiles");
+            //Table  
+            ToTable("Users");
 
-            //Relationship
-            this.HasRequired(t => t.User).WithRequiredDependent(u => u.Profile);
         }
     }
 }

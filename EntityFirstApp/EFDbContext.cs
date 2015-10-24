@@ -12,11 +12,18 @@ namespace EntityFirstApp
     {
         private IDbSet<Profile> _profiles;
         private IDbSet<User> _users;
+        private IDbSet<Customer> _customers;
+        private IDbSet<Order> _orders;
 
-        public EFDbContext()
-            : base("name=EF_Context")
+        public EFDbContext(): base("name=EF_Context")
         {
-            Database.SetInitializer<EFDbContext>(new CreateDatabaseIfNotExists<EFDbContext>());
+            //Database.SetInitializer<EFDbContext>(new CreateDatabaseIfNotExists<EFDbContext>()); // Default
+            //Database.SetInitializer<EFDbContext>(new DBInitializer());
+           // Database.SetInitializer<EFDbContext>(new DropCreateDatabaseIfModelChanges<EFDbContext>());
+           // Database.SetInitializer<EFDbContext>(new DropCreateDatabaseAlways<EFDbContext>());
+
+            //Disable initializer
+            //Database.SetInitializer<EFDbContext>(null);
         }
 
         public IDbSet<User> Users
@@ -43,12 +50,40 @@ namespace EntityFirstApp
             }
         }
 
-        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        public IDbSet<Customer> Customers 
         {
+            get
+            {
+                return this._customers;
+            }
+            set
+            {
+                this._customers = value;
+            }
+        }
+
+        public IDbSet<Order> Orders
+        {
+            get
+            {
+                return this._orders;
+            }
+            set
+            {
+                this._orders = value;
+            }
+        }
+
+
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        {  //Method override from DbContext class
+
             if (modelBuilder != null)
             {
                 modelBuilder.Configurations.Add(new ProfileMap());
                 modelBuilder.Configurations.Add(new UserMap());
+                modelBuilder.Configurations.Add(new OrderMap());
+                modelBuilder.Configurations.Add(new CustomerMap());
                 base.OnModelCreating(modelBuilder);
             }
         }
