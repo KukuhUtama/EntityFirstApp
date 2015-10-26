@@ -19,7 +19,7 @@ namespace EntityFirstApp
                 //ctx.Users.Add(firstUser);
                 //User user = new User
                 //{
-                //    UserName = "Isnati_P",
+                //    UserName = "xx",
                 //    Password = "123",
                 //    Email = "Isnati_P@test.com",
                 //    AddedDate = DateTime.Now,
