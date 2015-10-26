@@ -84,6 +84,8 @@ namespace EntityFirstApp
                 modelBuilder.Configurations.Add(new UserMap());
                 modelBuilder.Configurations.Add(new OrderMap());
                 modelBuilder.Configurations.Add(new CustomerMap());
+                modelBuilder.Configurations.Add(new StudentMap());
+                modelBuilder.Configurations.Add(new CourseMap());
                 base.OnModelCreating(modelBuilder);
             }
         }
