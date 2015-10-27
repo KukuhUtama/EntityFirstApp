@@ -1,1 +1,17 @@
+<<<<<<< HEAD
 D:\Project\Independent Project\SolutionVS2012\EntityFirstApp\EntityFirstApp\obj\Debug\EntityFirstApp.csprojResolveAssemblyReference.cache
+=======
+D:\Project\Independent Project\SolutionVS2012\EntityFirstApp\EntityFirstApp\bin\Debug\EntityFirstApp.exe.config
+D:\Project\Independent Project\SolutionVS2012\EntityFirstApp\EntityFirstApp\bin\Debug\EntityFirstApp.exe
+D:\Project\Independent Project\SolutionVS2012\EntityFirstApp\EntityFirstApp\bin\Debug\EntityFirstApp.pdb
+D:\Project\Independent Project\SolutionVS2012\EntityFirstApp\EntityFirstApp\bin\Debug\EntityFramework.dll
+D:\Project\Independent Project\SolutionVS2012\EntityFirstApp\EntityFirstApp\bin\Debug\EntityFramework.SqlServer.dll
+D:\Project\Independent Project\SolutionVS2012\EntityFirstApp\EntityFirstApp\bin\Debug\EntityFramework.xml
+D:\Project\Independent Project\SolutionVS2012\EntityFirstApp\EntityFirstApp\bin\Debug\EntityFramework.SqlServer.xml
+D:\Project\Independent Project\SolutionVS2012\EntityFirstApp\EntityFirstApp\obj\Debug\EntityFirstApp.csprojResolveAssemblyReference.cache
+D:\Project\Independent Project\SolutionVS2012\EntityFirstApp\EntityFirstApp\obj\Debug\EntityFirstApp.Migrations.FirstMigration.resources
+D:\Project\Independent Project\SolutionVS2012\EntityFirstApp\EntityFirstApp\obj\Debug\EntityFirstApp.Migrations.second.resources
+D:\Project\Independent Project\SolutionVS2012\EntityFirstApp\EntityFirstApp\obj\Debug\EntityFirstApp.csproj.GenerateResource.Cache
+D:\Project\Independent Project\SolutionVS2012\EntityFirstApp\EntityFirstApp\obj\Debug\EntityFirstApp.exe
+D:\Project\Independent Project\SolutionVS2012\EntityFirstApp\EntityFirstApp\obj\Debug\EntityFirstApp.pdb
+>>>>>>> parent of 26ebd5d... Eleventh
