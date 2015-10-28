@@ -49,6 +49,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BaseEntity.cs" />
+    <Compile Include="Base\RepositoryBase.cs" />
+    <Compile Include="Context\IContextFactory.cs" />
+    <Compile Include="Context\IDbContext.cs" />
+    <Compile Include="Course.cs" />
+    <Compile Include="Mapping\CourseMap.cs" />
     <Compile Include="Customer.cs" />
     <Compile Include="DBInitializer.cs" />
     <Compile Include="EFDbContext.cs" />
@@ -69,13 +74,26 @@
     <Compile Include="Profile.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repository Interface\ICourseRepository.cs" />
+    <Compile Include="Repository Interface\ICustomerRepository.cs" />
+    <Compile Include="Repository Interface\IOrderRepository.cs" />
+    <Compile Include="Repository Interface\IProfileRepository.cs" />
+    <Compile Include="Repository Interface\IStudentRepository.cs" />
+    <Compile Include="Repository Interface\IUserRepository.cs" />
+    <Compile Include="Repository\CourseRepository.cs" />
+    <Compile Include="Repository\CustomerRepository.cs" />
+    <Compile Include="Repository\OrderRepository.cs" />
+    <Compile Include="Repository\ProfileRepository.cs" />
+    <Compile Include="Repository\StudentRepository.cs" />
+    <Compile Include="Repository\UserRepository.cs" />
+    <Compile Include="Student.cs" />
+    <Compile Include="Mapping\StudentMap.cs" />
     <Compile Include="User.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config">
       <SubType>Designer</SubType>
     </None>
-    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201510240502524_First Migration.resx">
@@ -84,6 +102,9 @@
     <EmbeddedResource Include="Migrations\201510242230176_second.resx">
       <DependentUpon>201510242230176_second.cs</DependentUpon>
     </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Model\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
