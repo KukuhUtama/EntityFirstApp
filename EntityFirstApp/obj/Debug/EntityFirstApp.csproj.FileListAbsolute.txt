@@ -1,1 +1,14 @@
 D:\Project\Independent Project\SolutionVS2012\EntityFirstApp\EntityFirstApp\bin\Debug\EntityFirstApp.exe.config
+D:\ProjectSlnVS\EntityFirstApp\bin\Debug\EntityFirstApp.exe.config
+D:\ProjectSlnVS\EntityFirstApp\bin\Debug\EntityFirstApp.exe
+D:\ProjectSlnVS\EntityFirstApp\bin\Debug\EntityFirstApp.pdb
+D:\ProjectSlnVS\EntityFirstApp\bin\Debug\EntityFramework.dll
+D:\ProjectSlnVS\EntityFirstApp\bin\Debug\EntityFramework.SqlServer.dll
+D:\ProjectSlnVS\EntityFirstApp\bin\Debug\EntityFramework.xml
+D:\ProjectSlnVS\EntityFirstApp\bin\Debug\EntityFramework.SqlServer.xml
+D:\ProjectSlnVS\EntityFirstApp\obj\Debug\EntityFirstApp.csprojResolveAssemblyReference.cache
+D:\ProjectSlnVS\EntityFirstApp\obj\Debug\EntityFirstApp.Migrations.FirstMigration.resources
+D:\ProjectSlnVS\EntityFirstApp\obj\Debug\EntityFirstApp.Migrations.second.resources
+D:\ProjectSlnVS\EntityFirstApp\obj\Debug\EntityFirstApp.csproj.GenerateResource.Cache
+D:\ProjectSlnVS\EntityFirstApp\obj\Debug\EntityFirstApp.exe
+D:\ProjectSlnVS\EntityFirstApp\obj\Debug\EntityFirstApp.pdb
