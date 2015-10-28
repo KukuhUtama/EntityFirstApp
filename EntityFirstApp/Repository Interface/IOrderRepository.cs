@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace EntityFirstApp.Repository_Interface
 {
-    interface IOrderRepository
+     public interface IOrderRepository
     {
     }
 }

@@ -49,6 +49,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BaseEntity.cs" />
+    <Compile Include="Base\RepositoryBase.cs" />
+    <Compile Include="Context\IContextFactory.cs" />
+    <Compile Include="Context\IDbContext.cs" />
     <Compile Include="Course.cs" />
     <Compile Include="Mapping\CourseMap.cs" />
     <Compile Include="Customer.cs" />
@@ -71,12 +74,18 @@
     <Compile Include="Profile.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Repository Interface\ICourse.cs" />
-    <Compile Include="Repository Interface\ICustomer.cs" />
-    <Compile Include="Repository Interface\IOrder.cs" />
-    <Compile Include="Repository Interface\IProfile.cs" />
-    <Compile Include="Repository Interface\IStudent.cs" />
-    <Compile Include="Repository Interface\IUser.cs" />
+    <Compile Include="Repository Interface\ICourseRepository.cs" />
+    <Compile Include="Repository Interface\ICustomerRepository.cs" />
+    <Compile Include="Repository Interface\IOrderRepository.cs" />
+    <Compile Include="Repository Interface\IProfileRepository.cs" />
+    <Compile Include="Repository Interface\IStudentRepository.cs" />
+    <Compile Include="Repository Interface\IUserRepository.cs" />
+    <Compile Include="Repository\CourseRepository.cs" />
+    <Compile Include="Repository\CustomerRepository.cs" />
+    <Compile Include="Repository\OrderRepository.cs" />
+    <Compile Include="Repository\ProfileRepository.cs" />
+    <Compile Include="Repository\StudentRepository.cs" />
+    <Compile Include="Repository\UserRepository.cs" />
     <Compile Include="Student.cs" />
     <Compile Include="Mapping\StudentMap.cs" />
     <Compile Include="User.cs" />
@@ -95,7 +104,7 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Repository\" />
+    <Folder Include="Model\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

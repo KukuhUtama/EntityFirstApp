@@ -4,9 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace EntityFirstApp.Repository_Interface
+namespace EntityFirstApp.Context
 {
-     public interface IProfileRepository
+    public interface IContextFactory<T> where T: class, IDbContext
     {
+        T GetContext();
     }
 }
