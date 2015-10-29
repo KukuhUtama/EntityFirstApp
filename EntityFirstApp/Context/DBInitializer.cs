@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace EntityFirstApp
 {
-    public class DBInitializer : DropCreateDatabaseAlways<EFDbContext> 
+    public class DBInitializer : DropCreateDatabaseAlways<DbContextEF> 
     {
 
         public List<User> userList = new List<User>();
@@ -17,7 +17,7 @@ namespace EntityFirstApp
             userList.Add(new User() { UserName = "Kukuh Utama", Email = "kukuh2utama@gmail.com", Password = "Mitrais", AddedDate = new DateTime(2014, 1, 18), ModifiedDate = new DateTime(2014, 1, 18), IP = "localhost" });
         }
       
-        protected override void Seed(EFDbContext context)
+        protected override void Seed(DbContextEF context)
         {
             foreach (User u in userList)
             {
