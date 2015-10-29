@@ -11,7 +11,7 @@ namespace EntityFirstApp
         static void Main(string[] args)
         {   
             Console.WriteLine("Hello World");
-            using (var ctx = new EFDbContext())
+            using (var ctx = new DbContextEF())
             {
                 //ctx.Database.Initialize(false);    //The database will be created immediately after calling the Initialize() method instead of waiting until the context is used for the first time. 
                 //new DBInitializer().InitializeDatabase(ctx);

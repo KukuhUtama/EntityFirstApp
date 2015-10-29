@@ -28,6 +28,14 @@ namespace EntityFirstApp
             //Database.SetInitializer<EFDbContext>(null);
         }
 
+        public DbContext DbContext
+        {
+            get
+            {
+                return this;
+            }
+        }
+
         public IDbSet<User> Users
         {
             get
