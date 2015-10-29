@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace EntityFirstApp
 {
     public class Course:BaseEntity
-    {
+    {  ///
         public string Name { get; set; }
         public Int64 MaximumStrength { get; set; }
         public virtual ICollection<Student> Students { get; set; } 

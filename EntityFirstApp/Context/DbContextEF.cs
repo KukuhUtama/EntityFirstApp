@@ -1,4 +1,5 @@
-﻿using EntityFirstApp.Mapping;
+﻿using EntityFirstApp.Context;
+using EntityFirstApp.Mapping;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
@@ -8,14 +9,15 @@ using System.Threading.Tasks;
 
 namespace EntityFirstApp
 {
-    public class EFDbContext : DbContext
+    public class DbContextEF : DbContext, IDbContext  
     {
         private IDbSet<Profile> _profiles;
         private IDbSet<User> _users;
         private IDbSet<Customer> _customers;
         private IDbSet<Order> _orders;
 
-        public EFDbContext(): base("name=EF_Context")
+        public DbContextEF()
+            : base("name=EF_Context")
         {
             //Database.SetInitializer<EFDbContext>(new CreateDatabaseIfNotExists<EFDbContext>()); // Default
             //Database.SetInitializer<EFDbContext>(new DBInitializer());
