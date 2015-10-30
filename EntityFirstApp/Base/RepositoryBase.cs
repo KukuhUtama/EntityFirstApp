@@ -9,12 +9,11 @@ namespace EntityFirstApp.Base
 {
     public class RepositoryBase<T> where T: class, IDbContext
     {
+        protected IContextFactory<T> ContextFactory { get; set; }
         public RepositoryBase()
         {
-
         }
-        protected IContextFactory<T> ContextFactory { get; set; }
-
+        
         protected T Context
         {
             get

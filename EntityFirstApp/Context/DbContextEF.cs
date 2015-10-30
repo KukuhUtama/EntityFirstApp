@@ -15,7 +15,10 @@ namespace EntityFirstApp
         private IDbSet<User> _users;
         private IDbSet<Customer> _customers;
         private IDbSet<Order> _orders;
-
+        static DbContextEF()
+        {
+            Database.SetInitializer<DbContextEF>(null);
+        }
         public DbContextEF()
             : base("name=EF_Context")
         {
@@ -25,7 +28,7 @@ namespace EntityFirstApp
            // Database.SetInitializer<EFDbContext>(new DropCreateDatabaseAlways<EFDbContext>());
 
             //Disable initializer
-            //Database.SetInitializer<EFDbContext>(null);
+            Database.SetInitializer<DbContextEF>(null);
         }
 
         public DbContext DbContext
