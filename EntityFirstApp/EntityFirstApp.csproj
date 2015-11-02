@@ -51,8 +51,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Base\BaseRepository.cs" />
     <Compile Include="Context\ContextFactory.cs" />
+    <Compile Include="Context\DataContext.cs" />
     <Compile Include="Context\DbContextEF.cs" />
+    <Compile Include="Context\DbContextLibraryEF.cs" />
+    <Compile Include="Context\IDatabaseFactory.cs" />
+    <Compile Include="Context\IDataContext.cs" />
     <Compile Include="Context\IDbConnectionStringFactory.cs" />
     <Compile Include="Model\BaseEntity.cs" />
     <Compile Include="Base\RepositoryBase.cs" />

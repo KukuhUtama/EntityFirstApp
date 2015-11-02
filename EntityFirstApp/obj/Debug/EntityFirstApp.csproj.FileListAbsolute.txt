@@ -27,3 +27,19 @@ D:\Project\Independent Project\SolutionVS2012\EntityFirstApp\EntityFirstApp\obj\
 D:\Project\Independent Project\SolutionVS2012\EntityFirstApp\EntityFirstApp\bin\Debug\Microsoft.Practices.ServiceLocation.dll
 D:\Project\Independent Project\SolutionVS2012\EntityFirstApp\EntityFirstApp\bin\Debug\Microsoft.Practices.ServiceLocation.pdb
 D:\Project\Independent Project\SolutionVS2012\EntityFirstApp\EntityFirstApp\bin\Debug\Microsoft.Practices.ServiceLocation.xml
+D:\ProjectEntityFirstApp\EntityFirstApp\obj\Debug\EntityFirstApp.csprojResolveAssemblyReference.cache
+D:\ProjectEntityFirstApp\EntityFirstApp\obj\Debug\EntityFirstApp.Migrations.FirstMigration.resources
+D:\ProjectEntityFirstApp\EntityFirstApp\obj\Debug\EntityFirstApp.Migrations.second.resources
+D:\ProjectEntityFirstApp\EntityFirstApp\obj\Debug\EntityFirstApp.csproj.GenerateResource.Cache
+D:\ProjectEntityFirstApp\EntityFirstApp\obj\Debug\EntityFirstApp.exe
+D:\ProjectEntityFirstApp\EntityFirstApp\obj\Debug\EntityFirstApp.pdb
+D:\ProjectEntityFirstApp\EntityFirstApp\bin\Debug\EntityFirstApp.exe.config
+D:\ProjectEntityFirstApp\EntityFirstApp\bin\Debug\EntityFirstApp.exe
+D:\ProjectEntityFirstApp\EntityFirstApp\bin\Debug\EntityFirstApp.pdb
+D:\ProjectEntityFirstApp\EntityFirstApp\bin\Debug\EntityFramework.dll
+D:\ProjectEntityFirstApp\EntityFirstApp\bin\Debug\EntityFramework.SqlServer.dll
+D:\ProjectEntityFirstApp\EntityFirstApp\bin\Debug\Microsoft.Practices.ServiceLocation.dll
+D:\ProjectEntityFirstApp\EntityFirstApp\bin\Debug\EntityFramework.xml
+D:\ProjectEntityFirstApp\EntityFirstApp\bin\Debug\EntityFramework.SqlServer.xml
+D:\ProjectEntityFirstApp\EntityFirstApp\bin\Debug\Microsoft.Practices.ServiceLocation.pdb
+D:\ProjectEntityFirstApp\EntityFirstApp\bin\Debug\Microsoft.Practices.ServiceLocation.xml
