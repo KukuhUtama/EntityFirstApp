@@ -16,7 +16,7 @@ namespace EntityFirstApp.Base
        
         protected BaseRepository(IDatabaseFactory<D> databaseFactory)
         {
-            DatabaseFactory = databaseFactory;f
+            DatabaseFactory = databaseFactory;
             Dbset = DataContext.Set<T>();
         }
 
