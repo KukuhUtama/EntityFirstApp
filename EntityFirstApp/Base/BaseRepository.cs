@@ -13,8 +13,13 @@ namespace EntityFirstApp.Base
     {
         private D _dataContext;
         public IDbSet<T> Dbset;
-       
-        protected BaseRepository(IDatabaseFactory<D> databaseFactory)
+
+        public BaseRepository()
+        {
+
+        }
+
+        public BaseRepository(IDatabaseFactory<D> databaseFactory)
         {
             DatabaseFactory = databaseFactory;
             Dbset = DataContext.Set<T>();
