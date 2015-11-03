@@ -15,7 +15,11 @@ namespace EntityFirstApp.Context
             : base(nameOrConnectionString)
         {
             _instanceId = Guid.NewGuid();
+<<<<<<< HEAD
             //Configuration.LazyLoadingEnabled = falsefff;
+=======
+            //Configuration.LazyLoadingEnabled = false;
+>>>>>>> b032a4aac245ff77992b59dc5b5aa2dd0193ef96
             //Configuration.ProxyCreationEnabled = false;
         }
 
