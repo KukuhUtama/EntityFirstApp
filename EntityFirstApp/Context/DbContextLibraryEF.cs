@@ -21,7 +21,7 @@ namespace EntityFirstApp.Context
         }
 
         public DbContextLibraryEF()
-            : base("name=")
+            : base("name=EF_Context")
         {
 
         }

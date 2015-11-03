@@ -1,6 +1,8 @@
-﻿using EntityFirstApp.Repository;
+﻿using EntityFirstApp.Context;
+using EntityFirstApp.Repository;
 using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,7 +14,10 @@ namespace EntityFirstApp
         static void Main(string[] args)
         {   
             Console.WriteLine("Hello World");
-            UserRepository UserRepo = new UserRepository();
+           // public DbContext bb = new DbContext();
+          //  DbContextLibraryEF _context = new DbContextLibraryEF();
+            DatabaseFactory _context = new DatabaseFactory();
+            UserRepository UserRepo = new UserRepository(_context.Get());  
 
             var txt = UserRepo.GetAll();
             //using (var ctx = new DbContextEF())
