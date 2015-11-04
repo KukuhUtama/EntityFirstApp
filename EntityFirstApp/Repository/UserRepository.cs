@@ -1,4 +1,6 @@
-﻿using EntityFirstApp.Repository_Interface;
+﻿using EntityFirstApp.Base;
+using EntityFirstApp.Context;
+using EntityFirstApp.Repository_Interface;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,16 +10,17 @@ using System.Threading.Tasks;
 namespace EntityFirstApp.Repository
 {
     //public class UserRepository : RepositoryBase<DbContextEF>, ICustomerRepository
-    public class UserRepository : IUserRepository
+    //RepositoryBase<ORS_Applicant, ApplicantContext>, IApplicantRepository
+    public class UserRepository: RepositoryBase<User, AppContext>, IUserRepository
     {
 
-
+        //Focus in here
+        //In here should be extend method besides RepositoryBase method.
 
         public UserRepository() : base ()
         {
            
         }
-
 
         /// <summary>
         /// Return all User.

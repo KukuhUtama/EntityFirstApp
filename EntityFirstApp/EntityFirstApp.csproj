@@ -51,7 +51,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Base\DataContext.cs" />
+    <Compile Include="Base\RepositoryBase.cs" />
+    <Compile Include="Context\AppContext.cs" />
     <Compile Include="Context\DbContextEF.cs" />
+    <Compile Include="IContext\IDatabaseFactory.cs" />
+    <Compile Include="IContext\IDataContext.cs" />
     <Compile Include="Model\BaseEntity.cs" />
     <Compile Include="Model\Course.cs" />
     <Compile Include="Mapping\CourseMap.cs" />
@@ -104,9 +109,7 @@
       <DependentUpon>201510242230176_second.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Base\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
