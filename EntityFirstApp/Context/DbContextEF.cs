@@ -1,5 +1,4 @@
-﻿using EntityFirstApp.Context;
-using EntityFirstApp.Mapping;
+﻿using EntityFirstApp.Mapping;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
@@ -9,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace EntityFirstApp
 {
-    public class DbContextEF : DbContext, IDbContext  
+    public class DbContextEF : DbContext 
     {
         private IDbSet<Profile> _profiles;
         private IDbSet<User> _users;

@@ -1,6 +1,4 @@
-﻿using EntityFirstApp.Base;
-using EntityFirstApp.Context;
-using EntityFirstApp.Repository_Interface;
+﻿using EntityFirstApp.Repository_Interface;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,15 +8,14 @@ using System.Threading.Tasks;
 namespace EntityFirstApp.Repository
 {
     //public class UserRepository : RepositoryBase<DbContextEF>, ICustomerRepository
-    public class UserRepository : BaseRepository<User, DbContextLibraryEF>, IUserRepository
+    public class UserRepository : IUserRepository
     {
 
 
-        private DbContextLibraryEF _context;
 
-        public UserRepository(IDatabaseFactory<DbContextLibraryEF> databaseFactory) : base (databaseFactory)
+        public UserRepository() : base ()
         {
-            this._context = new DbContextLibraryEF(); 
+           
         }
 
 

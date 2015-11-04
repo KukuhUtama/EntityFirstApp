@@ -1,5 +1,4 @@
-﻿using EntityFirstApp.Context;
-using EntityFirstApp.Repository;
+﻿using EntityFirstApp.Repository;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
@@ -14,12 +13,7 @@ namespace EntityFirstApp
         static void Main(string[] args)
         {   
             Console.WriteLine("Hello World");
-           // public DbContext bb = new DbContext();
-          //  DbContextLibraryEF _context = new DbContextLibraryEF();
-            DatabaseFactory _context = new DatabaseFactory();
-            UserRepository UserRepo = new UserRepository(_context.Get());  
-
-            var txt = UserRepo.GetAll();
+           
             //using (var ctx = new DbContextEF())
             //{
             //    //ctx.Database.Initialize(false);    //The database will be created immediately after calling the Initialize() method instead of waiting until the context is used for the first time. 

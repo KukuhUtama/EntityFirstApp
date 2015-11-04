@@ -1,5 +1,4 @@
-﻿using EntityFirstApp.Base;
-using EntityFirstApp.Repository_Interface;
+﻿using EntityFirstApp.Repository_Interface;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace EntityFirstApp.Repository
 {
-    public class CustomerRepository : RepositoryBase<DbContextEF>, ICustomerRepository
+    public class CustomerRepository : ICustomerRepository
     {
         
     }
