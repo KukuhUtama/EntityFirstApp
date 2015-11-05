@@ -43,7 +43,12 @@
     <Compile Include="Service Interface\IUserService.cs" />
     <Compile Include="Service\UserService.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\EntityFirstApp\EntityFirstApp.csproj">
+      <Project>{3c00ff47-0a01-427f-a8b8-fb9eb4f2f660}</Project>
+      <Name>EntityFirstApp</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
