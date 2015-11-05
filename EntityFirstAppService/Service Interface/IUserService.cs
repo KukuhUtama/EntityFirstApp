@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace EntityFirstAppService
+namespace EntityFirstAppService.Service_Interface
 {
-    public class Class1
+    interface IUserService
     {
     }
 }
