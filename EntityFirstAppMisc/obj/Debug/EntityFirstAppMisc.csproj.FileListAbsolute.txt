@@ -1,0 +1,5 @@
+D:\Project\Independent Project\SolutionVS2012\EntityFirstApp\EntityFirstAppMisc\bin\Debug\EntityFirstAppMisc.dll
+D:\Project\Independent Project\SolutionVS2012\EntityFirstApp\EntityFirstAppMisc\bin\Debug\EntityFirstAppMisc.pdb
+D:\Project\Independent Project\SolutionVS2012\EntityFirstApp\EntityFirstAppMisc\obj\Debug\EntityFirstAppMisc.csprojResolveAssemblyReference.cache
+D:\Project\Independent Project\SolutionVS2012\EntityFirstApp\EntityFirstAppMisc\obj\Debug\EntityFirstAppMisc.dll
+D:\Project\Independent Project\SolutionVS2012\EntityFirstApp\EntityFirstAppMisc\obj\Debug\EntityFirstAppMisc.pdb

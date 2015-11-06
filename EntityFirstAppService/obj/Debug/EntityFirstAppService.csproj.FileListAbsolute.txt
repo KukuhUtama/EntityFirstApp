@@ -3,3 +3,7 @@ D:\Project\Independent Project\SolutionVS2012\EntityFirstApp\EntityFirstAppServi
 D:\Project\Independent Project\SolutionVS2012\EntityFirstApp\EntityFirstAppService\obj\Debug\EntityFirstAppService.csprojResolveAssemblyReference.cache
 D:\Project\Independent Project\SolutionVS2012\EntityFirstApp\EntityFirstAppService\obj\Debug\EntityFirstAppService.dll
 D:\Project\Independent Project\SolutionVS2012\EntityFirstApp\EntityFirstAppService\obj\Debug\EntityFirstAppService.pdb
+D:\Project\Independent Project\SolutionVS2012\EntityFirstApp\EntityFirstAppService\bin\Debug\EntityFirstApp.exe
+D:\Project\Independent Project\SolutionVS2012\EntityFirstApp\EntityFirstAppService\bin\Debug\EntityFramework.dll
+D:\Project\Independent Project\SolutionVS2012\EntityFirstApp\EntityFirstAppService\bin\Debug\EntityFirstApp.pdb
+D:\Project\Independent Project\SolutionVS2012\EntityFirstApp\EntityFirstAppService\bin\Debug\EntityFramework.xml

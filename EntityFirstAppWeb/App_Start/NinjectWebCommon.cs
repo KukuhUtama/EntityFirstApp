@@ -5,11 +5,13 @@ namespace EntityFirstAppWeb.App_Start
 {
     using System;
     using System.Web;
-
     using Microsoft.Web.Infrastructure.DynamicModuleHelper;
-
     using Ninject;
     using Ninject.Web.Common;
+    using EntityFirstAppService.Service_Interface;
+    using EntityFirstAppService.Service;
+    using EntityFirstApp.Repository_Interface;
+    using EntityFirstApp.Repository;
 
     public static class NinjectWebCommon 
     {
@@ -60,7 +62,8 @@ namespace EntityFirstAppWeb.App_Start
         /// </summary>
         /// <param name="kernel">The kernel.</param>
         private static void RegisterServices(IKernel kernel)
-        {
+        {  
+
         }        
     }
 }
