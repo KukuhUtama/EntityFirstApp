@@ -22,7 +22,7 @@ namespace EntityFirstAppService.Service
         /// Return all User.
         /// </summary>
         /// <returns>All User.</returns>
-        IEnumerable<User> GetAll()
+        public IEnumerable<User> GetAll()
         {
             return userRepository.GetAll();
         }
@@ -32,7 +32,7 @@ namespace EntityFirstAppService.Service
         /// </summary>
         /// <param name="id">The identifier.</param>
         /// <returns>Transport if found, null if the specified id is not found.</returns>
-        User GetUserById(Guid id)
+        public User GetUserById(Guid id)
         {
             return null;
         }
@@ -41,7 +41,7 @@ namespace EntityFirstAppService.Service
         /// Add new Transport.
         /// </summary>
         /// <param name="item">The User parameter.</param>
-        void AddUser(User item)
+        public void AddUser(User item)
         {
 
         }
@@ -50,7 +50,7 @@ namespace EntityFirstAppService.Service
         /// Delete the User.
         /// </summary>
         /// <param name="item">The entity.</param>
-        void DeleteUser(User item)
+        public void DeleteUser(User item)
         {
 
         }
@@ -59,7 +59,7 @@ namespace EntityFirstAppService.Service
         /// Updates existing User.
         /// </summary>
         /// <param name="item">The User parameter.</param>
-        void UpdateUser(User item)
+        public void UpdateUser(User item)
         {
 
         }
@@ -69,7 +69,7 @@ namespace EntityFirstAppService.Service
         /// </summary>
         /// <param name="id">The identifier.</param>
         /// <returns>User if found, null if the specified CompanyId is not found.</returns>
-        User GetUserByCompanyId(Guid id)
+        public User GetUserByCompanyId(Guid id)
         {
             return null;
         }
@@ -79,7 +79,7 @@ namespace EntityFirstAppService.Service
         /// </summary>
         /// <param name="code">The code identifier.</param>
         /// <returns>User if found, null if the specified code is not found.</returns>
-        User GetUserByCode(string code)
+        public User GetUserByCode(string code)
         {
             return null;
         }
