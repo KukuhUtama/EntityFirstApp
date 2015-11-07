@@ -1,5 +1,6 @@
 ﻿using EntityFirstApp.Base;
 using EntityFirstApp.Context;
+using EntityFirstApp.IContext;
 using EntityFirstApp.Repository_Interface;
 using System;
 using System.Collections.Generic;
@@ -13,13 +14,14 @@ namespace EntityFirstApp.Repository
     //RepositoryBase<ORS_Applicant, ApplicantContext>, IApplicantRepository
     public class UserRepository: RepositoryBase<User, AppContext>, IUserRepository
     {
-
+        private AppContext _context;
         //Focus in here
         //In here should be extend method besides RepositoryBase method.
 
-        public UserRepository() : base ()
+        public UserRepository(IDatabaseFactory<AppContext> databaseFactory)
+            : base(databaseFactory)
         {
-           
+            this._context = new AppContext();
         }
 
         /// <summary>
@@ -28,9 +30,12 @@ namespace EntityFirstApp.Repository
         /// <returns>All User.</returns>
         public IEnumerable<User> GetAll()
         {
-            return this.GetAll();
+            return Dbset.ToList();
         }
-
+        //public virtual IEnumerable<T> GetAll()
+        //{
+        //    return Dbset.ToList();
+        //}
         /// <summary>
         /// Find the User by identifier.
         /// </summary>

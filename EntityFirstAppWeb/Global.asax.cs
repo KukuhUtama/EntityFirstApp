@@ -19,9 +19,10 @@ namespace EntityFirstAppWeb
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
-
+          
             /*Ninject*/
-            NinjectHttpContainer.RegisterModules(NinjectHttpModules.Modules);  
+            //NinjectHttpContainer.RegisterModules(NinjectHttpModules.Modules);
+            //NinjectHttpContainer.RegisterModules(NinjectHttpModules.Modules); 
         }
     }
 }

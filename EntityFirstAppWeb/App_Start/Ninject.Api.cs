@@ -11,10 +11,11 @@ using System.Reflection;
 using System.Web;
 using System.Web.Http;
 using System.Web.Http.Dependencies;
+using System.Web.Mvc;
 
 namespace EntityFirstAppWeb.App_Start
 {
-    public class NinjectHttpResolver : IDependencyResolver, IDependencyScope
+    public class NinjectHttpResolver : System.Web.Http.Dependencies.IDependencyResolver, IDependencyScope
     {
         public IKernel Kernel { get; private set; }
         public NinjectHttpResolver(params NinjectModule[] modules)
@@ -68,7 +69,8 @@ namespace EntityFirstAppWeb.App_Start
         {
             public override void Load()
             {
-                //TODO: Bind to Concrete Types Here
+                Kernel.Bind<IFilterProvider>().To<FilterAttributeFilterProvider>();
+
                 //Services
                 Kernel.Bind<IUserService>().To<UserService>();
 

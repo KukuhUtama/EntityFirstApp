@@ -5,28 +5,31 @@ namespace EntityFirstAppWeb.App_Start
 {
     using System;
     using System.Web;
+
     using Microsoft.Web.Infrastructure.DynamicModuleHelper;
+
     using Ninject;
     using Ninject.Web.Common;
     using EntityFirstAppService.Service_Interface;
-    using EntityFirstAppService.Service;
-    using EntityFirstApp.Repository_Interface;
     using EntityFirstApp.Repository;
+    using EntityFirstApp.Repository_Interface;
+    using EntityFirstAppService.Service;
+    using System.Web.Http;
 
-    public static class NinjectWebCommon 
+    public static class NinjectWebCommon
     {
         private static readonly Bootstrapper bootstrapper = new Bootstrapper();
 
         /// <summary>
         /// Starts the application
         /// </summary>
-        public static void Start() 
+        public static void Start()
         {
             DynamicModuleUtility.RegisterModule(typeof(OnePerRequestHttpModule));
             DynamicModuleUtility.RegisterModule(typeof(NinjectHttpModule));
             bootstrapper.Initialize(CreateKernel);
         }
-        
+
         /// <summary>
         /// Stops the application.
         /// </summary>
@@ -34,7 +37,7 @@ namespace EntityFirstAppWeb.App_Start
         {
             bootstrapper.ShutDown();
         }
-        
+
         /// <summary>
         /// Creates the kernel that will manage your application.
         /// </summary>
@@ -44,6 +47,7 @@ namespace EntityFirstAppWeb.App_Start
             var kernel = new StandardKernel();
             try
             {
+                GlobalConfiguration.Configuration.DependencyResolver = kernel.Get<System.Web.Http.Dependencies.IDependencyResolver>();
                 kernel.Bind<Func<IKernel>>().ToMethod(ctx => () => new Bootstrapper().Kernel);
                 kernel.Bind<IHttpModule>().To<HttpApplicationInitializationHttpModule>();
 
@@ -62,8 +66,13 @@ namespace EntityFirstAppWeb.App_Start
         /// </summary>
         /// <param name="kernel">The kernel.</param>
         private static void RegisterServices(IKernel kernel)
-        {  
+        {
 
-        }        
+            //Services
+            kernel.Bind<IUserService>().To<UserService>();
+
+            //Repositories
+            kernel.Bind<IUserRepository>().To<UserRepository>();
+        }
     }
 }
