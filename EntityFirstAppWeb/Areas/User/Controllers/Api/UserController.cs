@@ -18,13 +18,12 @@ namespace EntityFirstAppWeb.Areas.User.Controllers.Api
         {
             this._userService = userService;
         }
-     
-
+    
       
         public IEnumerable<UserView> GetAllUser()
         {   
-            var x = this._userService.GetAll();
-            return null;
+           return (IEnumerable<UserView>) this._userService.GetAll();
+            
         }
     }
 }

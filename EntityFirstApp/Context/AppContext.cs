@@ -18,13 +18,15 @@ namespace EntityFirstApp.Context
         
         static AppContext()
         {
-            Database.SetInitializer<DbContextEF>(null);
+            Database.SetInitializer<AppContext>(null);
         }
         public AppContext(): base("name=EF_Context")
         {
             
-            //Disable initializer
-            Database.SetInitializer<DbContextEF>(null);
+        }
+        public virtual void Commit()
+        {
+            base.SaveChanges();
         }
 
         public DbContext DbContext
