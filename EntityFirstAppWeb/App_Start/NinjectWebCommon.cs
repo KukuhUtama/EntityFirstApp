@@ -15,6 +15,7 @@ namespace EntityFirstAppWeb.App_Start
     using EntityFirstApp.Repository_Interface;
     using EntityFirstApp.Repository;
     using EntityFirstApp.Context;
+    using EntityFirstApp.IContext;
     using System.Data.Entity;
 
     public static class NinjectWebCommon 
@@ -69,10 +70,12 @@ namespace EntityFirstAppWeb.App_Start
         private static void RegisterServices(IKernel kernel)
         {
             //kernel.Bind<AppContext>().ToSelf().InSingletonScope();
-            kernel.Bind<AppContext>().ToSelf().InRequestScope();
+            //kernel.Bind<AppContext>().ToSelf().InRequestScope();
             //kernel.Bind<IUnitOfWork>().ToMethod(ctx => ctx.Kernel.Get<DatabaseContext>());
-            kernel.Bind<DbContext>().ToMethod(ctx => ctx.Kernel.Get<AppContext>());
-
+            //kernel.Bind<DbContext>().ToMethod(ctx => ctx.Kernel.Get<AppContext>());
+            //kernel.Bind<IDatabaseFactory>().To<DatabaseFactory>();
+            kernel.Bind(typeof(IDatabaseFactory<>)).To(typeof(DatabaseFactory<>));
+            kernel.Bind<IDisposable>().To<Disposable>();
 
             kernel.Bind<IUserService>().To<UserService>();
             kernel.Bind<IUserRepository>().To<UserRepository>();

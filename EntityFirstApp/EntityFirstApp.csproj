@@ -54,7 +54,9 @@
     <Compile Include="Base\DataContext.cs" />
     <Compile Include="Base\RepositoryBase.cs" />
     <Compile Include="Context\AppContext.cs" />
+    <Compile Include="Context\DatabaseFactory.cs" />
     <Compile Include="Context\DbContextEF.cs" />
+    <Compile Include="Context\Disposable.cs" />
     <Compile Include="IContext\IDatabaseFactory.cs" />
     <Compile Include="IContext\IDataContext.cs" />
     <Compile Include="Model\BaseEntity.cs" />

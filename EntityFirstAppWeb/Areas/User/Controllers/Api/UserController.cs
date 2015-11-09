@@ -21,8 +21,14 @@ namespace EntityFirstAppWeb.Areas.User.Controllers.Api
     
       
         public IEnumerable<UserView> GetAllUser()
-        {   
-           return (IEnumerable<UserView>) this._userService.GetAll();
+        {
+            //IEnumerable<User> users = this._userService.GetAll();
+
+            //IEnumerable<User> mappedUsers = Mapper.Map<IEnumerable<User>>(users);
+
+            //return mappedUsers;
+            //return this._userService.GetAll();
+            return null;
             
         }
     }
