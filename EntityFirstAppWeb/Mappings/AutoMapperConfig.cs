@@ -11,16 +11,12 @@ namespace EntityFirstAppWeb.Mappings
     {
         public static void RegisterMappings()
         {   
-       
-             //.CreateMap<Entity, EntityDto>()
-             //.ForMember(
-            //    dest => dest.SomeDestinationProperty,
-            //    opt => opt.MapFrom(src => src.SomeSourceProperty)
-            //);
-
+             /*AutoMapper Back To Front */
             AutoMapper.Mapper.CreateMap<User, UserView>()
                               .ForMember(dest => dest.UserName,opt => opt.MapFrom(src => src.UserName))
                               .ForMember(dest => dest.Email, opt => opt.MapFrom(src => src.Email));
+
+            /*AutoMapper Front To Back */
         }
     }
 }

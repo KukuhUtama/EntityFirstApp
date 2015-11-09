@@ -1,4 +1,5 @@
-﻿using EntityFirstAppService.Service_Interface;
+﻿using AutoMapper;
+using EntityFirstAppService.Service_Interface;
 using EntityFirstAppWeb.Areas.User.Models;
 using System;
 using System.Collections.Generic;
@@ -22,13 +23,11 @@ namespace EntityFirstAppWeb.Areas.User.Controllers.Api
       
         public IEnumerable<UserView> GetAllUser()
         {
-            //IEnumerable<User> users = this._userService.GetAll();
+            IEnumerable<EntityFirstApp.User> users = this._userService.GetAll();
 
-            //IEnumerable<User> mappedUsers = Mapper.Map<IEnumerable<User>>(users);
+            IEnumerable<UserView> mappedUsers = Mapper.Map<IEnumerable<UserView>>(users);
 
-            //return mappedUsers;
-            //return this._userService.GetAll();
-            return null;
+            return mappedUsers;
             
         }
     }
