@@ -14,7 +14,7 @@ namespace EntityFirstApp.Mapping
         public ProfileMap()
         {
             //key  
-            this.HasKey(t => t.ID);
+            this.HasKey(t => t.Id);
 
             //fields  
             this.Property(t => t.FirstName);
@@ -22,7 +22,7 @@ namespace EntityFirstApp.Mapping
             this.Property(t => t.Address).HasMaxLength(100).HasColumnType("nvarchar");
             this.Property(t => t.AddedDate);
             this.Property(t => t.ModifiedDate);
-            this.Property(t => t.IP);
+         
 
             //table  
             ToTable("UserProfiles");

@@ -13,16 +13,16 @@ namespace EntityFirstApp
         public StudentMap()
         {
             //key  
-            HasKey(t => t.ID);
+            HasKey(t => t.Id);
 
             //property  
-            Property(t => t.ID).HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity);
+            Property(t => t.Id).HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity);
             Property(t => t.Name);
             Property(t => t.Age);
             Property(t => t.IsCurrent);
             Property(t => t.AddedDate).IsRequired();
             Property(t => t.ModifiedDate).IsRequired();
-            Property(t => t.IP);
+
 
             //table  
             ToTable("Students");

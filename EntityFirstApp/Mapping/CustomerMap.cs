@@ -13,16 +13,15 @@ namespace EntityFirstApp.Mapping
          public CustomerMap()
          {
              //key  
-             HasKey(t => t.ID);
+             HasKey(t => t.Id);
 
              //properties  
-             Property(t => t.ID).HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity);
+             Property(t => t.Id).HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity);
              Property(t => t.Name);
              Property(t => t.Email);
              Property(t => t.AddedDate);
              Property(t => t.ModifiedDate);
-             Property(t => t.IP);
-
+             
              //table  
              ToTable("Customers");
          }

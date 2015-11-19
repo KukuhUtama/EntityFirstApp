@@ -13,8 +13,8 @@ namespace EntityFirstApp
         public List<User> userList = new List<User>();
         public DBInitializer()
         {
-            userList.Add(new User() { UserName = "Rina Setiana", Email = "kukuh2utama@gmail.com", Password = "Mitrais", AddedDate = new DateTime(2014, 1, 18), ModifiedDate = new DateTime(2014, 1, 18), IP = "localhost" });
-            userList.Add(new User() { UserName = "Kukuh Utama", Email = "kukuh2utama@gmail.com", Password = "Mitrais", AddedDate = new DateTime(2014, 1, 18), ModifiedDate = new DateTime(2014, 1, 18), IP = "localhost" });
+            userList.Add(new User() { UserName = "Rina Setiana", Email = "kukuh2utama@gmail.com", Password = "Mitrais", AddedDate = new DateTime(2014, 1, 18), ModifiedDate = new DateTime(2014, 1, 18) });
+            userList.Add(new User() { UserName = "Kukuh Utama", Email = "kukuh2utama@gmail.com", Password = "Mitrais", AddedDate = new DateTime(2014, 1, 18), ModifiedDate = new DateTime(2014, 1, 18) });
         }
       
         protected override void Seed(DbContextEF context)

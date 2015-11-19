@@ -1,5 +1,6 @@
 ﻿using EntityFirstApp.Base;
 using EntityFirstApp.Mapping;
+using EntityFirstApp.Model;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
@@ -15,6 +16,7 @@ namespace EntityFirstApp.Context
         private IDbSet<User> _users;
         private IDbSet<Customer> _customers;
         private IDbSet<Order> _orders;
+        private IDbSet<Video> _videos;
         
         static AppContext()
         {
@@ -85,6 +87,17 @@ namespace EntityFirstApp.Context
             }
         }
 
+        public IDbSet<Video> Videos 
+        {
+            get
+            {
+                return this._videos;
+            }
+            set
+            {
+                this._videos = value;
+            }
+        }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {  //Method override from DbContext class
@@ -97,6 +110,7 @@ namespace EntityFirstApp.Context
                 modelBuilder.Configurations.Add(new CustomerMap());
                 modelBuilder.Configurations.Add(new StudentMap());
                 modelBuilder.Configurations.Add(new CourseMap());
+                modelBuilder.Configurations.Add(new VideoMap());
                 base.OnModelCreating(modelBuilder);
             }
         }

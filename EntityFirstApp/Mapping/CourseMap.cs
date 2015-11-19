@@ -13,12 +13,12 @@ namespace EntityFirstApp
         public CourseMap()
         {
             //property  
-            Property(t => t.ID).HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity);
+            Property(t => t.Id).HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity);
             Property(t => t.Name);
             Property(t => t.MaximumStrength);
             Property(t => t.AddedDate).IsRequired();
             Property(t => t.ModifiedDate).IsRequired();
-            Property(t => t.IP);
+            
 
             //table  
             ToTable("Courses");  

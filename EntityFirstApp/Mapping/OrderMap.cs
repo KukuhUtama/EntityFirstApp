@@ -13,16 +13,16 @@ namespace EntityFirstApp.Mapping
         public OrderMap()
         {
             //key  
-            HasKey(t => t.ID);
+            HasKey(t => t.Id);
 
             //Fields  
-            Property(t => t.ID).HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity);
+            Property(t => t.Id).HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity);
             Property(t => t.Quanatity);
             Property(t => t.Price);
             Property(t => t.CustomerId);
             Property(t => t.AddedDate);
             Property(t => t.ModifiedDate);
-            Property(t => t.IP);
+           
 
             //Table  
             ToTable("Orders"); 
