@@ -13,5 +13,6 @@ namespace EntityFirstApp.Model
         public int RentPrice { get; set; }
         public int Count { get; set; }
         public bool Status { get; set; }
+        public virtual ICollection<Rent> Rent { get; set; }
     }
 }

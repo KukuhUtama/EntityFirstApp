@@ -14,8 +14,6 @@ namespace EntityFirstApp.Context
     {
         private IDbSet<Profile> _profiles;
         private IDbSet<User> _users;
-        private IDbSet<Customer> _customers;
-        private IDbSet<Order> _orders;
         private IDbSet<Video> _videos;
         
         static AppContext()
@@ -63,29 +61,9 @@ namespace EntityFirstApp.Context
             }
         }
 
-        public IDbSet<Customer> Customers 
-        {
-            get
-            {
-                return this._customers;
-            }
-            set
-            {
-                this._customers = value;
-            }
-        }
+      
 
-        public IDbSet<Order> Orders
-        {
-            get
-            {
-                return this._orders;
-            }
-            set
-            {
-                this._orders = value;
-            }
-        }
+    
 
         public IDbSet<Video> Videos 
         {
@@ -106,10 +84,6 @@ namespace EntityFirstApp.Context
             {
                 modelBuilder.Configurations.Add(new ProfileMap());
                 modelBuilder.Configurations.Add(new UserMap());
-                modelBuilder.Configurations.Add(new OrderMap());
-                modelBuilder.Configurations.Add(new CustomerMap());
-                modelBuilder.Configurations.Add(new StudentMap());
-                modelBuilder.Configurations.Add(new CourseMap());
                 modelBuilder.Configurations.Add(new VideoMap());
                 base.OnModelCreating(modelBuilder);
             }

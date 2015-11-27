@@ -12,8 +12,7 @@ namespace EntityFirstApp
     {   // Will be not used 
         private IDbSet<Profile> _profiles;
         private IDbSet<User> _users;
-        private IDbSet<Customer> _customers;
-        private IDbSet<Order> _orders;
+      
         static DbContextEF()
         {
             Database.SetInitializer<DbContextEF>(null);
@@ -62,31 +61,6 @@ namespace EntityFirstApp
             }
         }
 
-        public IDbSet<Customer> Customers 
-        {
-            get
-            {
-                return this._customers;
-            }
-            set
-            {
-                this._customers = value;
-            }
-        }
-
-        public IDbSet<Order> Orders
-        {
-            get
-            {
-                return this._orders;
-            }
-            set
-            {
-                this._orders = value;
-            }
-        }
-
-
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {  //Method override from DbContext class
 
@@ -94,10 +68,6 @@ namespace EntityFirstApp
             {
                 modelBuilder.Configurations.Add(new ProfileMap());
                 modelBuilder.Configurations.Add(new UserMap());
-                modelBuilder.Configurations.Add(new OrderMap());
-                modelBuilder.Configurations.Add(new CustomerMap());
-                modelBuilder.Configurations.Add(new StudentMap());
-                modelBuilder.Configurations.Add(new CourseMap());
                 base.OnModelCreating(modelBuilder);
             }
         }
