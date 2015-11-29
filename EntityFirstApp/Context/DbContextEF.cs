@@ -1,4 +1,5 @@
 ﻿using EntityFirstApp.Mapping;
+using EntityFirstApp.Model;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
@@ -12,7 +13,10 @@ namespace EntityFirstApp
     {   // Will be not used 
         private IDbSet<Profile> _profiles;
         private IDbSet<User> _users;
-      
+        private IDbSet<Video> _videos;
+        private IDbSet<Rent> _rents;
+
+
         static DbContextEF()
         {
             Database.SetInitializer<DbContextEF>(null);
@@ -61,6 +65,30 @@ namespace EntityFirstApp
             }
         }
 
+        public IDbSet<Video> Videos
+        {
+            get
+            {
+                return this._videos;
+            }
+            set
+            {
+                this._videos = value;
+            }
+        }
+
+        public IDbSet<Rent> Rents
+        {
+            get
+            {
+                return this._rents;
+            }
+            set
+            {
+                this._rents = value;
+            }
+        }
+
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {  //Method override from DbContext class
 
@@ -68,6 +96,8 @@ namespace EntityFirstApp
             {
                 modelBuilder.Configurations.Add(new ProfileMap());
                 modelBuilder.Configurations.Add(new UserMap());
+                modelBuilder.Configurations.Add(new VideoMap());
+                modelBuilder.Configurations.Add(new RentMap());
                 base.OnModelCreating(modelBuilder);
             }
         }

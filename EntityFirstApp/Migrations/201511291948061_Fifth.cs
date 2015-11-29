@@ -3,7 +3,7 @@ namespace EntityFirstApp.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class Third : DbMigration
+    public partial class Fifth : DbMigration
     {
         public override void Up()
         {
@@ -58,8 +58,8 @@ namespace EntityFirstApp.Migrations
                 c => new
                     {
                         Id = c.Long(nullable: false, identity: true),
-                        Tittle = c.String(),
-                        Genre = c.String(),
+                        Tittle = c.String(nullable: false, maxLength: 25),
+                        Genre = c.String(nullable: false),
                         RentPrice = c.Int(nullable: false),
                         Count = c.Int(nullable: false),
                         Status = c.Boolean(nullable: false),

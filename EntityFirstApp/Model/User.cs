@@ -14,7 +14,7 @@ namespace EntityFirstApp
         public string Email { get; set; }
         public string Password { get; set; }
         public Profile Profile { get; set; }
-        public virtual ICollection<Rent> Rent { get; set; }
+        public virtual ICollection<Rent> Rents { get; set; } 
        
     }
 }

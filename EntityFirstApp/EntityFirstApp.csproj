@@ -61,10 +61,11 @@
     <Compile Include="Context\Disposable.cs" />
     <Compile Include="IContext\IDatabaseFactory.cs" />
     <Compile Include="IContext\IDataContext.cs" />
+    <Compile Include="Mapping\RentMap.cs" />
     <Compile Include="Mapping\VideoMap.cs" />
-    <Compile Include="Migrations\201511271952209_Third.cs" />
-    <Compile Include="Migrations\201511271952209_Third.Designer.cs">
-      <DependentUpon>201511271952209_Third.cs</DependentUpon>
+    <Compile Include="Migrations\201511291948061_Fifth.cs" />
+    <Compile Include="Migrations\201511291948061_Fifth.Designer.cs">
+      <DependentUpon>201511291948061_Fifth.cs</DependentUpon>
     </Compile>
     <Compile Include="Model\BaseEntity.cs" />
     <Compile Include="Context\DBInitializer.cs" />
@@ -91,8 +92,8 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201511271952209_Third.resx">
-      <DependentUpon>201511271952209_Third.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201511291948061_Fifth.resx">
+      <DependentUpon>201511291948061_Fifth.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

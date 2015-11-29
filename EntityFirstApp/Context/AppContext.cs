@@ -15,6 +15,7 @@ namespace EntityFirstApp.Context
         private IDbSet<Profile> _profiles;
         private IDbSet<User> _users;
         private IDbSet<Video> _videos;
+        private IDbSet<Rent> _rents;
         
         static AppContext()
         {
@@ -61,10 +62,18 @@ namespace EntityFirstApp.Context
             }
         }
 
-      
-
+        public IDbSet<Rent> Rents
+        {
+            get
+            {
+                return this._rents;
+            }
+            set
+            {
+                this._rents = value;
+            }
+        }
     
-
         public IDbSet<Video> Videos 
         {
             get
@@ -85,6 +94,7 @@ namespace EntityFirstApp.Context
                 modelBuilder.Configurations.Add(new ProfileMap());
                 modelBuilder.Configurations.Add(new UserMap());
                 modelBuilder.Configurations.Add(new VideoMap());
+                modelBuilder.Configurations.Add(new RentMap());
                 base.OnModelCreating(modelBuilder);
             }
         }
