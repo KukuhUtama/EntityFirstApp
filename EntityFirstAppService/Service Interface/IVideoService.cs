@@ -5,9 +5,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace EntityFirstApp.Repository_Interface
+namespace EntityFirstAppService.Service_Interface
 {
-    public interface IVideoRepository
+    public interface IVideoService
     {
         /// <summary>
         /// Return all Video.
@@ -53,5 +53,5 @@ namespace EntityFirstApp.Repository_Interface
         /// <param name="code">The code identifier.</param>
         /// <returns>Video if found, null if the specified code is not found.</returns>
         Video GetVideoByCode(string code);
-    }
+    }   
 }

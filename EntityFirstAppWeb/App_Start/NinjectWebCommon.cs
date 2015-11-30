@@ -79,6 +79,9 @@ namespace EntityFirstAppWeb.App_Start
 
             kernel.Bind<IUserService>().To<UserService>();
             kernel.Bind<IUserRepository>().To<UserRepository>();
+
+            kernel.Bind<IVideoService>().To<VideoService>();
+            kernel.Bind<IVideoRepository>().To<VideoRepository>();
         }        
     }
 }

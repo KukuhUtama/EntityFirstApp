@@ -142,6 +142,8 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Areas\User\Views\Shared\" />
+    <Folder Include="Areas\Video\Views\Shared\" />
+    <Folder Include="Areas\Video\Views\Video\" />
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
@@ -154,6 +156,10 @@
     <Compile Include="Areas\User\Controllers\UserController.cs" />
     <Compile Include="Areas\User\Models\UserView.cs" />
     <Compile Include="Areas\User\UserAreaRegistration.cs" />
+    <Compile Include="Areas\Video\Controllers\Api\VideoController.cs" />
+    <Compile Include="Areas\Video\Controllers\VideoController.cs" />
+    <Compile Include="Areas\Video\Models\VideoView.cs" />
+    <Compile Include="Areas\Video\VideoAreaRegistration.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -228,6 +234,7 @@
     <Content Include="Scripts\angular-animate.min.js.map" />
     <Content Include="Scripts\angular-sanitize.min.js.map" />
     <Content Include="Areas\User\Views\User\Index.cshtml" />
+    <Content Include="Areas\Video\Views\web.config" />
     <None Include="Scripts\jquery-2.1.1.intellisense.js" />
     <Content Include="Scripts\angular-mocks.js" />
     <Content Include="Scripts\bootstrap.js" />
