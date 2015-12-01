@@ -29,7 +29,7 @@ namespace EntityFirstApp.Repository
         /// </summary>
         /// <returns>All User.</returns>
         public IEnumerable<User> GetAll()
-        {
+        {  
             return Dbset.ToList();
         }
         //public virtual IEnumerable<T> GetAll()
@@ -70,17 +70,7 @@ namespace EntityFirstApp.Repository
         /// <param name="item">The User parameter.</param>
         public void UpdateUser(User item)
         {
-           
-        }
-
-        /// <summary>
-        /// Gets the transports by company identifier.
-        /// </summary>
-        /// <param name="id">The identifier.</param>
-        /// <returns>User if found, null if the specified CompanyId is not found.</returns>
-        public User GetUserByCompanyId(Guid id)
-        {
-            return null;
+            Update(item);
         }
 
         /// <summary>

@@ -65,16 +65,6 @@ namespace EntityFirstAppService.Service
         }
 
         /// <summary>
-        /// Gets the transports by company identifier.
-        /// </summary>
-        /// <param name="id">The identifier.</param>
-        /// <returns>User if found, null if the specified CompanyId is not found.</returns>
-        public User GetUserByCompanyId(Guid id)
-        {
-            return null;
-        }
-
-        /// <summary>
         /// Gets the transports by code.
         /// </summary>
         /// <param name="code">The code identifier.</param>

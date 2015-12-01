@@ -1,5 +1,6 @@
 ﻿using EntityFirstApp;
 using EntityFirstApp.Model;
+using EntityFirstAppWeb.Areas.Rent.Models;
 using EntityFirstAppWeb.Areas.User.Models;
 using EntityFirstAppWeb.Areas.Video.Models;
 using System;
@@ -19,6 +20,7 @@ namespace EntityFirstAppWeb.Mappings
                               .ForMember(dest => dest.Email, opt => opt.MapFrom(src => src.Email));
 
             AutoMapper.Mapper.CreateMap<Video, VideoView>();
+            AutoMapper.Mapper.CreateMap<Rent, RentView>();
 
             /*AutoMapper Front To Back */
         }

@@ -82,6 +82,9 @@ namespace EntityFirstAppWeb.App_Start
 
             kernel.Bind<IVideoService>().To<VideoService>();
             kernel.Bind<IVideoRepository>().To<VideoRepository>();
+
+            kernel.Bind<IRentService>().To<RentService>();
+            kernel.Bind<IRentRepository>().To<RentRepository>();
         }        
     }
 }

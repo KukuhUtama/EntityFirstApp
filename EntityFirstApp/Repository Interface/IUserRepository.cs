@@ -39,12 +39,7 @@ namespace EntityFirstApp.Repository_Interface
         /// <param name="item">The User parameter.</param>
         void UpdateUser(User item);
 
-        /// <summary>
-        /// Gets the transports by company identifier.
-        /// </summary>
-        /// <param name="id">The identifier.</param>
-        /// <returns>User if found, null if the specified CompanyId is not found.</returns>
-        User GetUserByCompanyId(Guid id);
+    
 
         /// <summary>
         /// Gets the transports by code.

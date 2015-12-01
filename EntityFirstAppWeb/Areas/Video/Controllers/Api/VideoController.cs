@@ -19,7 +19,7 @@ namespace EntityFirstAppWeb.Areas.Video.Controllers.Api
             this.videoService = _videoService;
         }
 
-        public IEnumerable<VideoView> GetAllUser()
+        public IEnumerable<VideoView> GetAllVideo()
         {
             IEnumerable<EntityFirstApp.Model.Video> videos = this.videoService.GetAll();
 

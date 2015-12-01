@@ -41,13 +41,6 @@ namespace EntityFirstAppService.Service_Interface
         void UpdateVideo(Video item);
 
         /// <summary>
-        /// Gets the transports by company identifier.
-        /// </summary>
-        /// <param name="id">The identifier.</param>
-        /// <returns>Video if found, null if the specified CompanyId is not found.</returns>
-        Video GetVideoByCompanyId(Guid id);
-
-        /// <summary>
         /// Gets the transports by code.
         /// </summary>
         /// <param name="code">The code identifier.</param>

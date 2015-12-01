@@ -141,6 +141,8 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Areas\Rent\Views\Rent\" />
+    <Folder Include="Areas\Rent\Views\Shared\" />
     <Folder Include="Areas\User\Views\Shared\" />
     <Folder Include="Areas\Video\Views\Shared\" />
     <Folder Include="Areas\Video\Views\Video\" />
@@ -152,6 +154,10 @@
     <Compile Include="App_Start\NinjectWebCommon.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Areas\Rent\Controllers\Api\RentController.cs" />
+    <Compile Include="Areas\Rent\Controllers\RentController.cs" />
+    <Compile Include="Areas\Rent\Models\RentView.cs" />
+    <Compile Include="Areas\Rent\RentAreaRegistration.cs" />
     <Compile Include="Areas\User\Controllers\Api\UserController.cs" />
     <Compile Include="Areas\User\Controllers\UserController.cs" />
     <Compile Include="Areas\User\Models\UserView.cs" />
@@ -235,6 +241,7 @@
     <Content Include="Scripts\angular-sanitize.min.js.map" />
     <Content Include="Areas\User\Views\User\Index.cshtml" />
     <Content Include="Areas\Video\Views\web.config" />
+    <Content Include="Areas\Rent\Views\web.config" />
     <None Include="Scripts\jquery-2.1.1.intellisense.js" />
     <Content Include="Scripts\angular-mocks.js" />
     <Content Include="Scripts\bootstrap.js" />

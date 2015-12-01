@@ -44,11 +44,6 @@ namespace EntityFirstAppService.Service
             throw new NotImplementedException();
         }
 
-        public Video GetVideoByCompanyId(Guid id)
-        {
-            throw new NotImplementedException();
-        }
-
         public Video GetVideoByCode(string code)
         {
             throw new NotImplementedException();

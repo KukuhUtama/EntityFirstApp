@@ -5,48 +5,46 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace EntityFirstApp.Repository_Interface
+namespace EntityFirstAppService.Service_Interface
 {
-    public interface IVideoRepository
+    public interface IRentService
     {
         /// <summary>
-        /// Return all Video.
+        /// Return all Rent.
         /// </summary>
-        /// <returns>All Video.</returns>
-        IEnumerable<Video> GetAll();
+        /// <returns>All Rent.</returns>
+        IEnumerable<Rent> GetAll();
 
         /// <summary>
-        /// Find the Video by identifier.
+        /// Find the Rent by identifier.
         /// </summary>
         /// <param name="id">The identifier.</param>
         /// <returns>Transport if found, null if the specified id is not found.</returns>
-        Video GetVideoById(Guid id);
+        Rent GetRentById(Guid id);
 
         /// <summary>
         /// Add new Transport.
         /// </summary>
-        /// <param name="item">The Video parameter.</param>
-        void AddVideo(Video item);
+        /// <param name="item">The Rent parameter.</param>
+        void AddRent(Rent item);
 
         /// <summary>
-        /// Delete the Video.
+        /// Delete the Rent.
         /// </summary>
         /// <param name="item">The entity.</param>
-        void DeleteVideo(Video item);
+        void DeleteRent(Rent item);
 
         /// <summary>
-        /// Updates existing Video.
+        /// Updates existing Rent.
         /// </summary>
-        /// <param name="item">The Video parameter.</param>
-        void UpdateVideo(Video item);
-
-
+        /// <param name="item">The Rent parameter.</param>
+        void UpdateRent(Rent item);
 
         /// <summary>
         /// Gets the transports by code.
         /// </summary>
         /// <param name="code">The code identifier.</param>
-        /// <returns>Video if found, null if the specified code is not found.</returns>
-        Video GetVideoByCode(string code);
+        /// <returns>Rent if found, null if the specified code is not found.</returns>
+        Rent GetRentByCode(string code); 
     }
 }

@@ -71,15 +71,7 @@ namespace EntityFirstApp.Repository
 
         }
 
-        /// <summary>
-        /// Gets the transports by company identifier.
-        /// </summary>
-        /// <param name="id">The identifier.</param>
-        /// <returns>Video if found, null if the specified CompanyId is not found.</returns>
-        public Video GetVideoByCompanyId(Guid id)
-        {
-            return null;
-        }
+       
 
         /// <summary>
         /// Gets the transports by code.
