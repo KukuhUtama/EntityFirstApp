@@ -39,8 +39,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ExpressionBuilder.cs" />
+    <Compile Include="Filter.cs" />
     <Compile Include="Message.cs" />
     <Compile Include="MessageType.cs" />
+    <Compile Include="Operator.cs" />
     <Compile Include="Response.cs" />
     <Compile Include="ResponseBase.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

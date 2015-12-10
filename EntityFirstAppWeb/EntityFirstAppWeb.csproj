@@ -147,6 +147,19 @@
     <Folder Include="Areas\Video\Views\Shared\" />
     <Folder Include="Areas\Video\Views\Video\" />
     <Folder Include="Models\" />
+    <Folder Include="Scripts\app\directives\" />
+    <Folder Include="Scripts\rent\controllers\" />
+    <Folder Include="Scripts\rent\directives\" />
+    <Folder Include="Scripts\rent\services\" />
+    <Folder Include="Scripts\rent\views\" />
+    <Folder Include="Scripts\user\controllers\" />
+    <Folder Include="Scripts\user\directives\" />
+    <Folder Include="Scripts\user\services\" />
+    <Folder Include="Scripts\user\views\" />
+    <Folder Include="Scripts\video\controllers\" />
+    <Folder Include="Scripts\video\directives\" />
+    <Folder Include="Scripts\video\services\" />
+    <Folder Include="Scripts\video\views\" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
@@ -244,6 +257,20 @@
     <Content Include="Areas\Rent\Views\web.config" />
     <None Include="Scripts\jquery-2.1.1.intellisense.js" />
     <Content Include="Scripts\angular-mocks.js" />
+    <Content Include="Scripts\app\app.js" />
+    <Content Include="Scripts\app\controllers\admin.js" />
+    <Content Include="Scripts\app\controllers\dashboard.js" />
+    <Content Include="Scripts\app\controllers\shell.js" />
+    <Content Include="Scripts\app\controllers\sidebar.js" />
+    <Content Include="Scripts\app\services\common.js" />
+    <Content Include="Scripts\app\services\logger.js" />
+    <Content Include="Scripts\app\services\spinner.js" />
+    <Content Include="Scripts\app\views\admin.html" />
+    <Content Include="Scripts\app\views\dashboard.html" />
+    <Content Include="Scripts\app\views\shell.html" />
+    <Content Include="Scripts\app\views\sidebar.html" />
+    <Content Include="Scripts\app\views\topnav.html" />
+    <Content Include="Scripts\app\views\widgerheader.html" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-2.1.1.js" />
@@ -253,6 +280,7 @@
     <Content Include="Scripts\moment-with-langs.min.js" />
     <Content Include="Scripts\moment.js" />
     <Content Include="Scripts\moment.min.js" />
+    <Content Include="Scripts\rent\rentModule.js" />
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
     <Content Include="Scripts\spin.js" />
@@ -261,6 +289,8 @@
     <Content Include="Scripts\toastr.min.js" />
     <Content Include="Scripts\ui-bootstrap-tpls-0.10.0.js" />
     <Content Include="Scripts\ui-bootstrap-tpls-0.10.0.min.js" />
+    <Content Include="Scripts\user\userModule.js" />
+    <Content Include="Scripts\video\videoModule.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

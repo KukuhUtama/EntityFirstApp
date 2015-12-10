@@ -59,6 +59,7 @@
     <Compile Include="Context\DatabaseFactory.cs" />
     <Compile Include="Context\DbContextEF.cs" />
     <Compile Include="Context\Disposable.cs" />
+    <Compile Include="Extension\RepositoryExtension.cs" />
     <Compile Include="IContext\IDatabaseFactory.cs" />
     <Compile Include="IContext\IDataContext.cs" />
     <Compile Include="Mapping\RentMap.cs" />
@@ -97,6 +98,12 @@
     <EmbeddedResource Include="Migrations\201511291948061_Fifth.resx">
       <DependentUpon>201511291948061_Fifth.cs</DependentUpon>
     </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\EntityFirstAppMisc\EntityFirstAppMisc.csproj">
+      <Project>{888afc49-c6e4-411e-b5a9-2c33cb2c116c}</Project>
+      <Name>EntityFirstAppMisc</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
