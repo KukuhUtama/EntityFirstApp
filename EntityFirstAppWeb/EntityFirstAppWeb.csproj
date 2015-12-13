@@ -147,7 +147,6 @@
     <Folder Include="Areas\Video\Views\Shared\" />
     <Folder Include="Areas\Video\Views\Video\" />
     <Folder Include="Models\" />
-    <Folder Include="Scripts\app\directives\" />
     <Folder Include="Scripts\rent\controllers\" />
     <Folder Include="Scripts\rent\directives\" />
     <Folder Include="Scripts\rent\services\" />
@@ -258,11 +257,15 @@
     <None Include="Scripts\jquery-2.1.1.intellisense.js" />
     <Content Include="Scripts\angular-mocks.js" />
     <Content Include="Scripts\app\app.js" />
+    <Content Include="Scripts\app\commonModule.js" />
+    <Content Include="Scripts\app\config.js" />
     <Content Include="Scripts\app\controllers\admin.js" />
     <Content Include="Scripts\app\controllers\dashboard.js" />
     <Content Include="Scripts\app\controllers\shell.js" />
     <Content Include="Scripts\app\controllers\sidebar.js" />
+    <Content Include="Scripts\app\directives\directive.js" />
     <Content Include="Scripts\app\services\common.js" />
+    <Content Include="Scripts\app\services\dataContext.js" />
     <Content Include="Scripts\app\services\logger.js" />
     <Content Include="Scripts\app\services\spinner.js" />
     <Content Include="Scripts\app\views\admin.html" />
@@ -273,6 +276,8 @@
     <Content Include="Scripts\app\views\widgerheader.html" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\bootstrap\bootstrapModule.js" />
+    <Content Include="Scripts\bootstrap\services\bootstrapDialog.js" />
     <Content Include="Scripts\jquery-2.1.1.js" />
     <Content Include="Scripts\jquery-2.1.1.min.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />

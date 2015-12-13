@@ -9,9 +9,7 @@
     // Configure the routes and route resolvers
     app.config(['$routeProvider', 'routes', routeConfigurator]);
     function routeConfigurator($routeProvider, routes) {
-        console.log("xaxa");
         routes.forEach(function (r) {
-            console.log("xixix");
             $routeProvider.when(r.url, r.config);
         });
         $routeProvider.otherwise({ redirectTo: '/' });
