@@ -3,6 +3,8 @@
 shellController.$inject = ['$rootScope', 'common', 'config'];
 
 function shellController($rootScope, common, config) {
+    console.log(config);
+    console.log("shell controller");
     var vm = this;
     var logSuccess = common.logger.getLogFn('shell', 'success');
     var events = config.events;

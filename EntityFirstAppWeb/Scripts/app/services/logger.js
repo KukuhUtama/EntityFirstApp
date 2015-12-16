@@ -1,15 +1,4 @@
-﻿//app.factory('loggerService', ['$http', '$q', function ($http, $q) {
-
-//    var loggerService = {
-
-
-//    };
-
-//    return loggerService;
-//}]);
-
-
-angular.module('common').factory('logger', ['$log', logger]);
+﻿angular.module('common').factory('logger', ['$log', logger]);
 
 function logger($log) {
     var service = {

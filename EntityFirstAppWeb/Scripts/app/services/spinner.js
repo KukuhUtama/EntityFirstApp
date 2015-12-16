@@ -1,14 +1,4 @@
-﻿//app.factory('spinnerService', ['$http', '$q', function ($http, $q) {
-
-//    var spinnerService = {
-
-
-//    };
-
-//    return spinnerService;
-//}]);
-
-angular.module('common')
+﻿angular.module('common')
      .factory('spinner', ['common', 'commonConfig', spinner]);
 
 function spinner(common, commonConfig) {

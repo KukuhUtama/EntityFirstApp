@@ -6,9 +6,7 @@ var app = angular.module('EntityFirstApp', [
         'ngSanitize',       // sanitizes html bindings (ex: sidebar.js)
 
         // Custom modules 
-        'common',           // common functions, logger, spinner
-        'common.bootstrap', // bootstrap dialog wrapper functions
-
+        'common',
         // 3rd Party Modules
         'ui.bootstrap',      // ui-bootstrap (ex: carousel, pagination, dialog)
 
@@ -18,41 +16,45 @@ var app = angular.module('EntityFirstApp', [
         'rentModule'
 ]);
 
-app.constant('routes', getRoutes());
+app.config(function ($routeProvider) {
 
-// Configure the routes and route resolvers
-app.config(['$routeProvider', 'routes', routeConfigurator]);
-
-function routeConfigurator($routeProvider, routes) {
-    routes.forEach(function (r) {
-        $routeProvider.when(r.url, r.config);
+    $routeProvider.when("/", {
+       // controller: "dashboardController",
+        templateUrl: "scripts/app/views/dashboard.html"
     });
-    $routeProvider.otherwise({ redirectTo: '/' });
-}
 
-// Define the routes 
-function getRoutes() {
-    return [
-        {
-            url: '/',
-            config: {
-                templateUrl: 'scripts/app/views/dashboard.html',
-                title: 'dashboard',
-                settings: {
-                    nav: 1,
-                    content: '<i class="fa fa-dashboard"></i> Dashboard'
-                }
-            }
-        }, {
-            url: '/admin',
-            config: {
-                title: 'admin',
-                templateUrl: 'scripts/app/views/admin.html',
-                settings: {
-                    nav: 2,
-                    content: '<i class="fa fa-lock"></i> Admin'
-                }
-            }
-        }
-    ];
-}
+    $routeProvider.when("/admin", {
+        // controller: "candidatesController",
+        templateUrl: "scripts/app/views/admin.html"
+    });
+
+    $routeProvider.when("/EditUser", {
+        controller: "editUserController",
+        templateUrl: "scripts/user/views/EditUser.html"
+    });
+
+    $routeProvider.when("/ShowUser", {
+        controller:  "showUserController",
+        templateUrl: "scripts/user/views/ShowUser.html"
+    });
+
+
+    $routeProvider.when("/EditVideo", {
+        controller: "editVideoController",
+        templateUrl: "scripts/video/views/EditVideo.html"
+    });
+
+    $routeProvider.when("/ShowVideo", {
+        controller: "showVideoController",
+        templateUrl: "scripts/video/views/ShowVideo.html"
+    });
+
+    $routeProvider.when("/ShowRenting", {
+        controller: "showRentController",
+        templateUrl: "scripts/rent/views/ShowRent.html"
+    });
+
+
+    $routeProvider.otherwise({ redirectTo: "/" });
+
+});

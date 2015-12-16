@@ -11,7 +11,7 @@ function sidebarController($route, config, routes) {
 
     activate();
 
-    function activate() { getNavRoutes(); }
+    //function activate() { getNavRoutes(); }
 
     function getNavRoutes() {
         vm.navRoutes = routes.filter(function (r) {
