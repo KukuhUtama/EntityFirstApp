@@ -148,11 +148,8 @@
     <Folder Include="Areas\Video\Views\Video\" />
     <Folder Include="Models\" />
     <Folder Include="Scripts\rent\directives\" />
-    <Folder Include="Scripts\rent\services\" />
     <Folder Include="Scripts\user\directives\" />
-    <Folder Include="Scripts\user\services\" />
     <Folder Include="Scripts\video\directives\" />
-    <Folder Include="Scripts\video\services\" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
@@ -254,6 +251,7 @@
     <None Include="Scripts\jquery-2.1.1.intellisense.js" />
     <Content Include="Scripts\angular-mocks.js" />
     <Content Include="Scripts\app\app.js" />
+    <Content Include="Scripts\app\commonEnum.js" />
     <Content Include="Scripts\app\commonModule.js" />
     <Content Include="Scripts\app\config.js" />
     <Content Include="Scripts\app\controllers\admin.js" />
@@ -289,6 +287,7 @@
     <Content Include="Scripts\ng-table.min.js" />
     <Content Include="Scripts\rent\controllers\showRentController.js" />
     <Content Include="Scripts\rent\rentModule.js" />
+    <Content Include="Scripts\rent\services\rentService.js" />
     <Content Include="Scripts\rent\views\ShowRent.html" />
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
@@ -300,11 +299,13 @@
     <Content Include="Scripts\ui-bootstrap-tpls-0.10.0.min.js" />
     <Content Include="Scripts\user\controllers\editUserController.js" />
     <Content Include="Scripts\user\controllers\showUserController.js" />
+    <Content Include="Scripts\user\services\userService.js" />
     <Content Include="Scripts\user\userModule.js" />
     <Content Include="Scripts\user\views\EditUser.html" />
     <Content Include="Scripts\user\views\ShowUser.html" />
     <Content Include="Scripts\video\controllers\editVideoController.js" />
     <Content Include="Scripts\video\controllers\showVideoController.js" />
+    <Content Include="Scripts\video\services\videoService.js" />
     <Content Include="Scripts\video\videoModule.js" />
     <Content Include="Scripts\video\views\EditVideo.html" />
     <Content Include="Scripts\video\views\ShowVideo.html" />

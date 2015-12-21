@@ -9,7 +9,7 @@ var app = angular.module('EntityFirstApp', [
         'common',
         // 3rd Party Modules
         'ui.bootstrap',      // ui-bootstrap (ex: carousel, pagination, dialog)
-
+        'ngTable',
         //EntityFirstApp module start here
         'userModule',
         'videoModule',
@@ -30,27 +30,32 @@ app.config(function ($routeProvider) {
 
     $routeProvider.when("/EditUser", {
         controller: "editUserController",
+        controllerAs: "vm",
         templateUrl: "scripts/user/views/EditUser.html"
     });
 
     $routeProvider.when("/ShowUser", {
-        controller:  "showUserController",
+        controller: "showUserController",
+        controllerAs: "vm",
         templateUrl: "scripts/user/views/ShowUser.html"
     });
 
 
     $routeProvider.when("/EditVideo", {
         controller: "editVideoController",
+        controllerAs: "vm",
         templateUrl: "scripts/video/views/EditVideo.html"
     });
 
     $routeProvider.when("/ShowVideo", {
         controller: "showVideoController",
+        controllerAs: "vm",
         templateUrl: "scripts/video/views/ShowVideo.html"
     });
 
     $routeProvider.when("/ShowRenting", {
         controller: "showRentController",
+        controllerAs: "vm",
         templateUrl: "scripts/rent/views/ShowRent.html"
     });
 

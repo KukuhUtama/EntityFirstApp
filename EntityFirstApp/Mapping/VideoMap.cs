@@ -17,7 +17,7 @@ namespace EntityFirstApp.Mapping
 
             //Field
             Property(t => t.Id).HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity);
-            Property(t => t.Tittle).IsRequired().HasMaxLength(25);
+            Property(t => t.Title).IsRequired().HasMaxLength(25);
             Property(t => t.Genre).IsRequired();
             Property(t => t.Count);
             Property(t => t.RentPrice);

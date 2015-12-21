@@ -5,9 +5,30 @@
                 <div class="widget wviolet">
                     <div data-cc-widget-header title="User"></div>
                     <div class="widget-content user">
-                        Show User
+                       
+                   <table ng-table="vm.usersTable" class="table table-striped" show-filter="true">
+                        <tr ng-repeat="user in $data">
+                            <td data-title="'Id'" filter="{ Id: 'number'}">
+                                {{user.Id}}
+                            </td>
+                            <td data-title="'Username'" filter="{ UserName: 'text'}">
+                                {{user.UserName}}
+                            </td>
+                            <td data-title="'e-mail'" filter="{ Email: 'text'}">
+                                {{user.Email}}
+                            </td>
+                            <td data-title="'AddedDate'" filter="{ AddedDate: 'text'}">
+                                {{user.AddedDate}}
+                            </td>
+                            <td data-title="'ModifiedDate'" filter="{ ModifiedDate: 'text'}">
+                                {{user.ModifiedDate}}
+                            </td>
+                        </tr>
+                    </table>
+                    <br/>
                     </div>
                     <div class="widget-foot">
+                        <button ng-click="vm.doSearch()">Search</button>
                         <div class="clearfix"></div>
                     </div>
                 </div>
@@ -15,5 +36,3 @@
         </div>
     </section>
 </section>
-
-

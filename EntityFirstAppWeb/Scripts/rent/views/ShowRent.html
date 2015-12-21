@@ -1,1 +1,51 @@
-﻿RENT
+﻿<section class="mainbar">
+    <section class="matter">
+        <div class="container">
+            <div class="row">
+                <div class="widget wviolet">
+                    <div data-cc-widget-header title="Renting"></div>
+                    <div class="widget-content user">
+
+                        <table ng-table="vm.rentsTable" class="table table-striped" show-filter="true">
+                            <tr ng-repeat="rent in $data">
+                                <td data-title="'Id'" filter="{ Id: 'number'}">
+                                    {{rent.Id}}
+                                </td>
+
+                                <td data-title="'User Id'" filter="{ UserId: 'number'}">
+                                    {{rent.UserId}}
+                                </td>
+                                <td data-title="'Video Id'" filter="{ VideoId: 'number'}">
+                                    {{rent.VideoId}}
+                                </td>
+
+                                <td data-title="'Rent Price'" filter="{ RentPrice: 'number'}">
+                                    {{video.RentPrice}}
+                                </td>
+                                <td data-title="'Renting Length'" filter="{ RentingLength: 'number'}">
+                                    {{rent.RentingLength}}
+                                </td>
+                                <td data-title="'Renting Cost'" filter="{ RentingCost: 'number'}">
+                                    {{rent.RentingCost}}
+                                </td>
+
+                                <td data-title="'AddedDate'" filter="{ AddedDate: 'text'}">
+                                    {{rent.AddedDate}}
+                                </td>
+                                <td data-title="'ModifiedDate'" filter="{ ModifiedDate: 'text'}">
+                                    {{rent.ModifiedDate}}
+                                </td>
+                            </tr>
+                        </table>
+                        <br />
+                    </div>
+                    <div class="widget-foot">
+                        <button ng-click="vm.doSearch()">Search</button>
+                        <div class="clearfix"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</section>
+

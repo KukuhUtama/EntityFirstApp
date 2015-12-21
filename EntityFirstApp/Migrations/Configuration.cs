@@ -55,7 +55,7 @@ namespace EntityFirstApp.Migrations
 
             Video firstVideo = new Video()
             {
-               Tittle = "Mengejar Matahari",
+               Title = "Mengejar Matahari",
                Genre ="Horror",
                RentPrice =111,
                Count =10,
@@ -66,7 +66,7 @@ namespace EntityFirstApp.Migrations
 
             Video secondVideo = new Video()
             {
-                Tittle = "Mengejar Mas Mas",
+                Title = "Mengejar Mas Mas",
                 Genre = "Commedy",
                 RentPrice = 111,
                 Count = 10,
@@ -77,7 +77,7 @@ namespace EntityFirstApp.Migrations
 
             Video thirdVideo = new Video() 
             {
-                Tittle = "Jagad X Code",
+                Title = "Jagad X Code",
                 Genre = "Commedy",
                 RentPrice = 111,
                 Count = 10,
