@@ -10,12 +10,14 @@ var app = angular.module('EntityFirstApp', [
         // 3rd Party Modules
         'ui.bootstrap',      // ui-bootstrap (ex: carousel, pagination, dialog)
         'ngTable',
+        'toaster',
+        
+
         //EntityFirstApp module start here
         'userModule',
         'videoModule',
         'rentModule'
 ]);
-
 app.config(function ($routeProvider) {
 
     $routeProvider.when("/", {
@@ -40,7 +42,6 @@ app.config(function ($routeProvider) {
         templateUrl: "scripts/user/views/ShowUser.html"
     });
 
-
     $routeProvider.when("/EditVideo", {
         controller: "editVideoController",
         controllerAs: "vm",
@@ -59,7 +60,5 @@ app.config(function ($routeProvider) {
         templateUrl: "scripts/rent/views/ShowRent.html"
     });
 
-
     $routeProvider.otherwise({ redirectTo: "/" });
-
 });

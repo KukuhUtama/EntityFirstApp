@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using EntityFirstAppMisc;
 using EntityFirstAppService.Service_Interface;
 using EntityFirstAppWeb.Areas.User.Models;
 using System;
@@ -19,8 +20,9 @@ namespace EntityFirstAppWeb.Areas.User.Controllers.Api
         {
             this._userService = userService;
         }
-    
-      
+
+        [HttpGet]
+        [ActionName("GetAllUser")]
         public IEnumerable<UserView> GetAllUser()
         {
             IEnumerable<EntityFirstApp.User> users = this._userService.GetAll();
@@ -28,7 +30,52 @@ namespace EntityFirstAppWeb.Areas.User.Controllers.Api
             IEnumerable<UserView> mappedUsers = Mapper.Map<IEnumerable<UserView>>(users);
 
             return mappedUsers;
-            
         }
+
+        [HttpPost]
+        [ActionName("DeleteUser")]
+        public Response<UserView> DeleteUser(Int64 Id)
+        {
+            var entityUser = this._userService.GetUserById(Id);
+            this._userService.DeleteUser(Id);
+
+            UserView userView = Mapper.Map<UserView>(entityUser);
+
+            //// build response
+            var response = new Response<UserView> { Model = userView };
+
+            response.Messages.Add(new Message
+            {
+                MessageType = MessageType.Success,
+                Value = "Success"
+            });
+
+            return response;
+        }
+
+
+        [HttpPost]
+        [ActionName("AddUser")]
+        public Response<UserView> AddUser(UserView user)
+        {
+            EntityFirstApp.User mappedUser = Mapper.Map <EntityFirstApp.User>(user); 
+
+            var entityUser = this._userService.AddUser(mappedUser);
+
+            UserView userView = Mapper.Map<UserView>(entityUser);
+
+            //// build response
+            var response = new Response<UserView> { Model = userView };
+
+            response.Messages.Add(new Message
+            {
+                MessageType = MessageType.Success,
+                Value = "Success"
+            });
+
+            return response;
+        }
+
+      
     }
 }

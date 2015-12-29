@@ -31,6 +31,7 @@
     <link href="content/styles.css" rel="stylesheet" />
 </head>
 <body>
+    @*<div><toaster-container></toaster-container></div>*@
     <div>
         <div data-ng-include="'/scripts/app/views/shell.html'"></div>
         <div id="splash-page" data-ng-show="false">
@@ -58,6 +59,8 @@
     <script src="scripts/ui-bootstrap-tpls-0.10.0.js"></script>
     <script src="scripts/spin.js"></script>
     <script src="scripts/ng-table.min.js"></script>
+    <script src="scripts/toaster.js"></script>
+   
 
     <!-- Bootstrapping -->
     <script src="scripts/app/app.js"></script>
@@ -69,8 +72,9 @@
     <script src="scripts/app/services/logger.js"></script>
     <script src="scripts/app/services/spinner.js"></script>
     <script src="scripts/app/services/dataContext.js"></script>
-
-
+    <script src="scripts/app/services/dataContext.js"></script>
+    <script src="scripts/app/services/modalService.js"></script>
+   
     <!-- common.bootstrap Modules -->
     <script src="scripts/bootstrap/bootstrapModule.js"></script>
     <script src="scripts/bootstrap/services/bootstrapDialog.js"></script>
@@ -81,6 +85,8 @@
     <script src="scripts/app/controllers/shell.js"></script>
     <script src="scripts/app/controllers/sidebar.js"></script>
     <script src="scripts/app/controllers/sidebarAccordionController.js"></script>
+    <script src="scripts/app/controllers/confirmationModalController.js"></script>
+    
 
     <!-- app Services -->
     <script src="scripts/app/directives/directive.js"></script>

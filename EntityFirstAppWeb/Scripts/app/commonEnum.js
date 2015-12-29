@@ -19,8 +19,12 @@ function commonEnum() {
 
         webApiUrl: {
             getAllUser: '/user/getAllUser',
+            addUser: '/user/addUser',
+            deleteUser: '/user/deleteUser',
             getAllVideo: '/video/getallVideo',
-            getAllRenting: '/rent/getAllRent'
+            addVideo: '/video/addVideo',
+            deleteVideo: '/video/deleteVideo',
+            getAllRenting: '/rent/getAllRent',
         },
 
         modalUrl: {

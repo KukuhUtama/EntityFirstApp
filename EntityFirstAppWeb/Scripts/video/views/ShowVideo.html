@@ -7,40 +7,42 @@
                     <div class="widget-content user">
 
                         <table ng-table="vm.videosTable" class="table table-striped" show-filter="true">
-                            <tr ng-repeat="video in $data">
-                                <td data-title="'Id'" filter="{ Id: 'number'}">
-                                    {{video.Id}}
-                                </td>
-                                
+                                <tr ng-repeat="video in $data">
+                                    <td data-title="'Id'" filter="{ Id: 'number'}" class="col-md-1">
+                                        {{video.Id}}
+                                    </td>
 
-                                <td data-title="'Title'" filter="{ Title: 'text'}">
-                                   {{video.Title}}
-                                </td>
-                                <td data-title="'Genre'" filter="{ Genre: 'text'}">
-                                    {{video.Genre}}
-                                </td>
-                                <td data-title="'Rent Price'" filter="{ RentPrice: 'text'}">
-                                   {{video.RentPrice}}
-                                </td>
-                                <td data-title="'Count'" filter="{ Count: 'text'}">
-                                    {{video.Count}}
-                                </td>
-                                <td data-title="'Status'" filter="{ Status: 'text'}">
-                                    {{video.Status}}
-                                </td>
+                                    <td data-title="'Title'" filter="{ Title: 'text'}" class="col-md-2">
+                                        {{video.Title}}
+                                    </td>
+                                    <td data-title="'Genre'" filter="{ Genre: 'text'}" class="col-md-1">
+                                        {{video.genre}}
+                                    </td>
+                                    <td data-title="'Rent Price'" filter="{ RentPrice: 'text'}" class="col-md-1">
+                                        {{video.RentPrice}}
+                                    </td>
+                                    <td data-title="'Count'" filter="{ Count: 'text'}" class="col-md-1">
+                                        {{video.Count}}
+                                    </td>
+                                    <td data-title="'Status'" filter="{ Status: 'text'}" class="col-md-1">
+                                        {{video.Status}}
+                                    </td>
 
-                                <td data-title="'AddedDate'" filter="{ AddedDate: 'text'}">
-                                    {{video.AddedDate}}
-                                </td>
-                                <td data-title="'ModifiedDate'" filter="{ ModifiedDate: 'text'}">
-                                    {{video.ModifiedDate}}
-                                </td>
-                            </tr>
+                                    <td data-title="'AddedDate'" filter="{ AddedDate: 'text'}" class="col-md-2">
+                                        {{video.AddedDate}}
+                                    </td>
+                                    <td data-title="'ModifiedDate'" filter="{ ModifiedDate: 'text'}" class="col-md-2">
+                                        {{video.ModifiedDate}}
+                                    </td>
+                                    <td data-title="'Action'" class="col-md-2">
+                                        <a href="">Edit</a> | <a href="" ng-click="vm.deleteVideo(video.Id)">Delete</a>
+                                    </td>
+                                </tr>
                         </table>
                         <br />
                     </div>
                     <div class="widget-foot">
-                        <button ng-click="vm.doSearch()">Search</button>
+                        <button ng-click="vm.doSearch()">Search</button> <span></span><button ng-click="vm.addVideo()">Add Video</button>
                         <div class="clearfix"></div>
                     </div>
                 </div>

@@ -39,39 +39,42 @@ namespace EntityFirstApp.Repository
         /// </summary>
         /// <param name="id">The identifier.</param>
         /// <returns>Video if found, null if the specified id is not found.</returns>
-        public Video GetVideoById(Guid id)
+        public Video GetVideoById(Int64 Id)
         {
-            return null;
+            return Dbset.Where(x => x.Id == Id).FirstOrDefault();
         }
 
         /// <summary>
         /// Add new Video.
         /// </summary>
         /// <param name="item">The Video parameter.</param>
-        public void AddVideo(Video item)
+        public Video AddVideo(Video item)
         {
-
+            _context.Videos.Add(item);
+            _context.SaveChanges();
+            Int64 Id = item.Id;
+            return GetVideoById(Id);
         }
 
         /// <summary>
         /// Delete the Video.
         /// </summary>
         /// <param name="item">The entity.</param>
-        public void DeleteVideo(Video item)
+        public void DeleteVideo(Int64 Id)
         {
-
+            Video video = GetVideoById(Id);
+            _context.Videos.Attach(video);
+            _context.Videos.Remove(video);
+            _context.SaveChanges();
         }
 
         /// <summary>
         /// Updates existing Video.
         /// </summary>
         /// <param name="item">The Video parameter.</param>
-        public void UpdateVideo(Video item)
+        public void UpdateVideo(Video video)
         {
-
         }
-
-       
 
         /// <summary>
         /// Gets the transports by code.

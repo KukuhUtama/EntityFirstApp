@@ -24,19 +24,19 @@ namespace EntityFirstAppService.Service
             return videoRepository.GetAll();
         }
 
-        public Video GetVideoById(Guid id)
+        public Video GetVideoById(Int64 Id)
         {
-            throw new NotImplementedException();
+            return videoRepository.GetVideoById(Id);
         }
 
-        public void AddVideo(Video item)
+        public Video AddVideo(Video item)
         {
-            throw new NotImplementedException();
+            return videoRepository.AddVideo(item);
         }
 
-        public void DeleteVideo(Video item)
+        public void DeleteVideo(Int64 Id)
         {
-            throw new NotImplementedException();
+            videoRepository.DeleteVideo(Id);
         }
 
         public void UpdateVideo(Video item)

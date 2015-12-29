@@ -3,12 +3,33 @@
         <div class="container">
             <div class="row">
                 <div class="widget wviolet">
-                    <div data-cc-widget-header title="User"></div>
-                    <div class="widget-content user">
-                            Edit User
+                  <div data-cc-widget-header title="User"></div>
+                  <div class="widget-content user">
+                      <form class="form-horizontal"  novalidate name="form">
+                          <div class="form-group">
+                              <label class="col-lg-2 control-label">Name</label>
+                              <input class="form-control" type="text" ng-model="vm.user.UserName" ng-required="true" />
+                          </div>
+                          <div class="form-group">
+                              <label class="col-lg-2 control-label">E-Mail</label>
+                              <input class="form-control" type="email" ng-model="vm.user.Email" ng-required="true" />
+                          </div>
+                          <div class="form-group">
+                              <label class="col-lg-2 control-label">Password</label>
+                              <input class="form-control" type="password" ng-model="vm.user.Password" ng-required="true" />
+                          </div>
+                      </form>
                     </div>
+                
                     <div class="widget-foot">
-                        <div class="clearfix"></div>
+                        <div class="clearfix">
+                            <div class="form-group">
+                                <div class="col-sm-offset-1 col-sm-10">
+                                    <button type="button" class="btn btn-primary" ng-click="vm.reset()">Reset</button> <span></span>
+                                    <button type="button" class="btn btn-primary" ng-click="vm.addUser()" ng-disabled="form.$invalid">Add</button>
+                                </div>
+                             </div>
+                        </div>
                     </div>
                 </div>
             </div>

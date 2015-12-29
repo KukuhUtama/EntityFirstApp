@@ -48,6 +48,10 @@
     <Compile Include="Service\VideoService.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\EntityFirstAppMisc\EntityFirstAppMisc.csproj">
+      <Project>{888afc49-c6e4-411e-b5a9-2c33cb2c116c}</Project>
+      <Name>EntityFirstAppMisc</Name>
+    </ProjectReference>
     <ProjectReference Include="..\EntityFirstApp\EntityFirstApp.csproj">
       <Project>{3c00ff47-0a01-427f-a8b8-fb9eb4f2f660}</Project>
       <Name>EntityFirstApp</Name>

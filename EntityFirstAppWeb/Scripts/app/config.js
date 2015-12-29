@@ -5,7 +5,7 @@
 
     // Configure Toastr
     toastr.options.timeOut = 4000;
-    toastr.options.positionClass = 'toast-bottom-right';
+    toastr.options.positionClass = 'toast-top-right';
 
     // For use with the HotTowel-Angular-Breeze add-on that uses Breeze
     var remoteServiceName = 'breeze/Breeze';

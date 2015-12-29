@@ -25,7 +25,16 @@ namespace EntityFirstAppWeb.Mappings
             AutoMapper.Mapper.CreateMap<Video, VideoView>();
             AutoMapper.Mapper.CreateMap<Rent, RentView>();
 
+         
+
             /*AutoMapper Front To Back */
+            AutoMapper.Mapper.CreateMap<UserView, User>()
+                              .ForMember(dest => dest.UserName, opt => opt.MapFrom(src => src.UserName))
+                              .ForMember(dest => dest.Email, opt => opt.MapFrom(src => src.Email))
+                              .ForMember(dest => dest.Password, opt => opt.MapFrom(src => src.Password))
+                              .ForMember(dest => dest.AddedDate, opt => opt.MapFrom(src => src.AddedDate))
+                              .ForMember(dest => dest.ModifiedDate, opt => opt.MapFrom(src => src.ModifiedDate));
+            AutoMapper.Mapper.CreateMap<VideoView, Video>();
         }
     }
 }

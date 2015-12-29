@@ -7,6 +7,7 @@ function shellController($rootScope, common, config) {
     console.log("shell controller");
     var vm = this;
     var logSuccess = common.logger.getLogFn('shell', 'success');
+    console.log(logSuccess);
     var events = config.events;
     vm.busyMessage = 'Please wait ...';
     vm.isBusy = true;

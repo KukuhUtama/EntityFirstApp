@@ -41,27 +41,33 @@ namespace EntityFirstApp.Repository
         /// </summary>
         /// <param name="id">The identifier.</param>
         /// <returns>User if found, null if the specified id is not found.</returns>
-        public User GetUserById(Guid id)
+        public User GetUserById(Int64 Id)
         {
-            return null;
+            return Dbset.Where( x => x.Id == Id).First();
         }
 
         /// <summary>
         /// Add new User.
         /// </summary>
         /// <param name="item">The User parameter.</param>
-        public void AddUser(User item)
+        public User AddUser(User user)
         {
-           
+            _context.Users.Add(user);
+            _context.SaveChanges();
+            Int64 Id = user.Id;
+            return GetUserById(Id);
         }
 
         /// <summary>
         /// Delete the User.
         /// </summary>
         /// <param name="item">The entity.</param>
-        public void DeleteUser(User item)
+        public void DeleteUser(Int64 Id)
         {
-
+            User user = GetUserById(Id);
+            _context.Users.Attach(user);
+            _context.Users.Remove(user);
+            _context.SaveChanges();
         }
 
         /// <summary>

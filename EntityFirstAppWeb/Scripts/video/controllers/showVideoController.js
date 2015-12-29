@@ -1,10 +1,14 @@
 ﻿videoModule.controller('showVideoController', showVideoController);
 
-showVideoController.$inject = ['ngTableParams', 'videoService'];
+showVideoController.$inject = ['$scope', '$location', 'ngTableParams', 'videoService', 'modalService'];
 
-function showVideoController(ngTableParams, videoService) {
-    console.log(videoService)
+function showVideoController($scope, $location, ngTableParams, videoService, modalService) {
+    
     var vm = this;
+
+    $scope.$on('videoTableEvent', function (event, data) {
+        vm.videosTable.reload();
+    });
 
     vm.videosTable = new ngTableParams({
         page: 1,
@@ -16,7 +20,6 @@ function showVideoController(ngTableParams, videoService) {
             videoService.getAllVideo().then(onSuccessGetAllVideo, onFailedGetAllVideo);
 
             function onSuccessGetAllVideo(result) {
-                console.log(result);
                 vm.data = result;
                 params.total(result.length);
                 $defer.resolve(vm.data);
@@ -27,5 +30,18 @@ function showVideoController(ngTableParams, videoService) {
             }
         }
     });
+
+    vm.addVideo = addVideo;
+    vm.deleteVideo = deleteVideo;
+
+    function addVideo() {
+        var url = '/EditVideo';
+        $location.url(url);
+    }
+
+    function deleteVideo(videoId) {
+        modalService.confirmationModal(videoId, 'videoService');
+    }
+
     console.log("Show cide Controller");
 }

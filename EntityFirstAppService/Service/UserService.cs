@@ -1,5 +1,6 @@
 ﻿using EntityFirstApp;
 using EntityFirstApp.Repository_Interface;
+using EntityFirstAppMisc;
 using EntityFirstAppService.Service_Interface;
 using System;
 using System.Collections.Generic;
@@ -32,27 +33,28 @@ namespace EntityFirstAppService.Service
         /// </summary>
         /// <param name="id">The identifier.</param>
         /// <returns>Transport if found, null if the specified id is not found.</returns>
-        public User GetUserById(Guid id)
+        public User GetUserById(Int64 Id)
         {
-            return null;
+            return this.userRepository.GetUserById(Id);   
         }
 
         /// <summary>
         /// Add new Transport.
         /// </summary>
         /// <param name="item">The User parameter.</param>
-        public void AddUser(User item)
+        
+        public User AddUser(User user)
         {
-
+            return this.userRepository.AddUser(user);
         }
 
         /// <summary>
         /// Delete the User.
         /// </summary>
         /// <param name="item">The entity.</param>
-        public void DeleteUser(User item)
+        public void DeleteUser(Int64 Id)
         {
-
+            this.userRepository.DeleteUser(Id);
         }
 
         /// <summary>

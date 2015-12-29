@@ -17,8 +17,14 @@ namespace EntityFirstAppWeb
             config.Routes.MapHttpRoute(
                 name: "DefaultApi",
                 routeTemplate: "api/{controller}/{id}",
-                defaults: new { id = RouteParameter.Optional }
-            );
+                defaults: new { id = RouteParameter.Optional },
+                constraints: new { id = @"^[0-9]+$" });
+
+           config.Routes.MapHttpRoute(
+                name: "ApiByName",
+                routeTemplate: "api/{controller}/{action}/{id}",
+                defaults: new { id = RouteParameter.Optional });
+
         }
     }
 }

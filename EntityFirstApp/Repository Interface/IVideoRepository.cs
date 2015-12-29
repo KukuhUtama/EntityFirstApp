@@ -20,27 +20,25 @@ namespace EntityFirstApp.Repository_Interface
         /// </summary>
         /// <param name="id">The identifier.</param>
         /// <returns>Transport if found, null if the specified id is not found.</returns>
-        Video GetVideoById(Guid id);
+        Video GetVideoById(Int64 id);
 
         /// <summary>
         /// Add new Transport.
         /// </summary>
         /// <param name="item">The Video parameter.</param>
-        void AddVideo(Video item);
+        Video AddVideo(Video item);
 
         /// <summary>
         /// Delete the Video.
         /// </summary>
         /// <param name="item">The entity.</param>
-        void DeleteVideo(Video item);
+        void DeleteVideo(Int64 Id);
 
         /// <summary>
         /// Updates existing Video.
         /// </summary>
         /// <param name="item">The Video parameter.</param>
         void UpdateVideo(Video item);
-
-
 
         /// <summary>
         /// Gets the transports by code.

@@ -19,19 +19,19 @@ namespace EntityFirstApp.Repository_Interface
         /// </summary>
         /// <param name="id">The identifier.</param>
         /// <returns>Transport if found, null if the specified id is not found.</returns>
-       User GetUserById(Guid id); 
+       User GetUserById(Int64 Id);  
 
         /// <summary>
         /// Add new Transport.
         /// </summary>
         /// <param name="item">The User parameter.</param>
-        void AddUser(User item);
+        User AddUser(User item);
 
         /// <summary>
         /// Delete the User.
         /// </summary>
         /// <param name="item">The entity.</param>
-        void DeleteUser(User item);
+        void DeleteUser(Int64 Id);
 
         /// <summary>
         /// Updates existing User.

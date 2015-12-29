@@ -7,30 +7,35 @@
                     <div class="widget-content user">
                        
                    <table ng-table="vm.usersTable" class="table table-striped" show-filter="true">
-                        <tr ng-repeat="user in $data">
-                            <td data-title="'Id'" filter="{ Id: 'number'}">
-                                {{user.Id}}
-                            </td>
-                            <td data-title="'Username'" filter="{ UserName: 'text'}">
-                                {{user.UserName}}
-                            </td>
-                            <td data-title="'e-mail'" filter="{ Email: 'text'}">
-                                {{user.Email}}
-                            </td>
-                            <td data-title="'AddedDate'" filter="{ AddedDate: 'text'}">
-                                {{user.AddedDate}}
-                            </td>
-                            <td data-title="'ModifiedDate'" filter="{ ModifiedDate: 'text'}">
-                                {{user.ModifiedDate}}
-                            </td>
-                        </tr>
+                           <tr ng-repeat="user in $data">
+                               <td data-title="'Id'" filter="{ Id: 'number'}" class="col-md-1">
+                                   {{user.Id}}
+                               </td>
+                               <td data-title="'Username'" filter="{ UserName: 'text'}" class="col-md-2">
+                                   {{user.UserName}}
+                               </td>
+                               <td data-title="'e-mail'" filter="{ Email: 'text'}" class="col-md-2">
+                                   {{user.Email}}
+                               </td>
+                               <td data-title="'AddedDate'" filter="{ AddedDate: 'text'}" class="col-md-2">
+                                   {{user.AddedDate}}
+                               </td>
+                               <td data-title="'ModifiedDate'" filter="{ ModifiedDate: 'text'}" class="col-md-2">
+                                   {{user.ModifiedDate}}
+                               </td>
+                               <td data-title="'Action'" class="col-md-2">
+                                   <a href="">Edit</a> | <a href="" ng-click="vm.deleteUser(user.Id)">Delete</a>
+                               </td>
+                           </tr>
                     </table>
+
                     <br/>
                     </div>
                     <div class="widget-foot">
-                        <button ng-click="vm.doSearch()">Search</button>
+                        <button ng-click="vm.doSearch()">Search</button><span></span><button ng-click="vm.addUser()">Add User</button>
                         <div class="clearfix"></div>
                     </div>
+
                 </div>
             </div>
         </div>
