@@ -35,6 +35,7 @@ namespace EntityFirstAppWeb.Mappings
                               .ForMember(dest => dest.AddedDate, opt => opt.MapFrom(src => src.AddedDate))
                               .ForMember(dest => dest.ModifiedDate, opt => opt.MapFrom(src => src.ModifiedDate));
             AutoMapper.Mapper.CreateMap<VideoView, Video>();
+            AutoMapper.Mapper.CreateMap<RentView, Rent>();
         }
     }
 }

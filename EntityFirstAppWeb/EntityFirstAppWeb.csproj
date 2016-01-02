@@ -293,9 +293,11 @@
     <Content Include="Scripts\moment.min.js" />
     <Content Include="Scripts\ng-table.js" />
     <Content Include="Scripts\ng-table.min.js" />
+    <Content Include="Scripts\rent\controllers\editRentController.js" />
     <Content Include="Scripts\rent\controllers\showRentController.js" />
     <Content Include="Scripts\rent\rentModule.js" />
     <Content Include="Scripts\rent\services\rentService.js" />
+    <Content Include="Scripts\rent\views\EditRent.html" />
     <Content Include="Scripts\rent\views\ShowRent.html" />
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />

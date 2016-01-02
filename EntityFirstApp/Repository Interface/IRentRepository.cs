@@ -20,13 +20,13 @@ namespace EntityFirstApp.Repository_Interface
         /// </summary>
         /// <param name="id">The identifier.</param>
         /// <returns>Transport if found, null if the specified id is not found.</returns>
-        Rent GetRentById(Guid id);
+        Rent GetRentById(Int64 Id); 
 
         /// <summary>
         /// Add new Transport.
         /// </summary>
         /// <param name="item">The Rent parameter.</param>
-        void AddRent(Rent item);
+        Rent AddRent(Rent item);
 
         /// <summary>
         /// Delete the Rent.

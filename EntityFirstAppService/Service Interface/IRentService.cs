@@ -26,7 +26,7 @@ namespace EntityFirstAppService.Service_Interface
         /// Add new Transport.
         /// </summary>
         /// <param name="item">The Rent parameter.</param>
-        void AddRent(Rent item);
+        Rent AddRent(Rent item);
 
         /// <summary>
         /// Delete the Rent.

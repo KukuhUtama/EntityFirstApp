@@ -59,7 +59,12 @@ function sidebarAccordionController($scope, $route) {
                                    name: "Show Renting",
                                    desc: "Show Renting",
                                    url: "/ShowRenting"
-                               }
+                               },
+                                  {
+                                      name: "Add Renting",
+                                      desc: "Add Renting",
+                                      url: "/EditRenting"
+                                  }
                            ]
                        }
     ];

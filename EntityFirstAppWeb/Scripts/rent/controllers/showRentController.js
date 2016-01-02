@@ -14,8 +14,10 @@ function showRentController(ngTableParams, rentService) {
             rentService.getAllRenting().then(onSuccessGetAllRenting, onFailedGetAllRenting);
 
             function onSuccessGetAllRenting(result) {
-                console.log(result);
                 vm.data = result;
+                for (i = 0; i < result.length; i++) {
+                    vm.data[i].RentPrice = vm.data[i].RentingCost / vm.data[i].RentingLength;
+                }
                 params.total(result.length);
                 $defer.resolve(vm.data);
             }

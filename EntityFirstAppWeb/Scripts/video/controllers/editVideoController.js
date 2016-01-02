@@ -27,6 +27,7 @@ function editVideoController($location, videoService) {
         videoService.addVideo(vm.video).then(onSuccessAddVideo, onFailedAddVideo);
 
         function onSuccessAddVideo(data) {
+            toastr.success('Adding Video Success');
             vm.video = {};
             $location.url('/ShowVideo');
         }

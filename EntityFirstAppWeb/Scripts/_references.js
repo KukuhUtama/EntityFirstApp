@@ -59,3 +59,4 @@
 /// <reference path="toaster.min.js" />
 /// <reference path="app/services/modalservice.js" />
 /// <reference path="app/controllers/confirmationmodalcontroller.js" />
+/// <reference path="rent/controllers/editrentcontroller.js" />

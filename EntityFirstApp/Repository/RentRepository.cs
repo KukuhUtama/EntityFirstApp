@@ -32,18 +32,20 @@ namespace EntityFirstApp.Repository
         /// </summary>
         /// <param name="id">The identifier.</param>
         /// <returns>Transport if found, null if the specified id is not found.</returns>
-        public Rent GetRentById(Guid id)
+        public Rent GetRentById(Int64 Id)
         {
-           return null;
+            return Dbset.Where(x => x.Id == Id).FirstOrDefault();
         }
 
         /// <summary>
         /// Add new Transport.
         /// </summary>
         /// <param name="item">The Rent parameter.</param>
-        public void AddRent(Rent item)
+        public Rent AddRent(Rent item)
         {
-
+            _context.Rents.Add(item);
+            _context.SaveChanges();
+            return GetRentById(item.Id);  
         }
 
         /// <summary>

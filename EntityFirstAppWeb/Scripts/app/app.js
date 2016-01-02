@@ -60,5 +60,12 @@ app.config(function ($routeProvider) {
         templateUrl: "scripts/rent/views/ShowRent.html"
     });
 
+    $routeProvider.when("/EditRenting", {
+        controller: "editRentController",
+        controllerAs: "vm",
+        templateUrl: "scripts/rent/views/EditRent.html"
+    });
+
+
     $routeProvider.otherwise({ redirectTo: "/" });
 });

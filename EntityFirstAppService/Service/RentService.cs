@@ -1,4 +1,5 @@
-﻿using EntityFirstApp.Repository_Interface;
+﻿using EntityFirstApp.Model;
+using EntityFirstApp.Repository_Interface;
 using EntityFirstAppService.Service_Interface;
 using System;
 using System.Collections.Generic;
@@ -16,27 +17,27 @@ namespace EntityFirstAppService.Service
         {
             this.rentRepository = _rentRepository;
         }
-        public IEnumerable<EntityFirstApp.Model.Rent> GetAll()
+        public IEnumerable<Rent> GetAll()
         {
             return rentRepository.GetAll();
         }
 
-        public EntityFirstApp.Model.Rent GetRentById(Guid id)
+        public Rent GetRentById(Guid id)
         {
             throw new NotImplementedException();
         }
 
-        public void AddRent(EntityFirstApp.Model.Rent item)
+        public Rent AddRent(Rent item)
+        {
+            return rentRepository.AddRent(item);
+        }
+
+        public void DeleteRent(Rent item)
         {
             throw new NotImplementedException();
         }
 
-        public void DeleteRent(EntityFirstApp.Model.Rent item)
-        {
-            throw new NotImplementedException();
-        }
-
-        public void UpdateRent(EntityFirstApp.Model.Rent item)
+        public void UpdateRent(Rent item)
         {
             throw new NotImplementedException();
         }
