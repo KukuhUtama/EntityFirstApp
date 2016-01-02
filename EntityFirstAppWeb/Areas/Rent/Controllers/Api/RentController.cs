@@ -50,5 +50,49 @@ namespace EntityFirstAppWeb.Areas.Rent.Controllers.Api
 
             return response;
         }
+
+
+        [HttpPost]
+        [ActionName("GetRentById")]
+        public Response<RentView> GetRentById(Int64 Id)
+        {
+
+            var entityRent = this.rentService.GetRentById(Id);
+
+            RentView rentView = Mapper.Map<RentView>(entityRent);
+
+            var response = new Response<RentView> { Model = rentView };
+
+            response.Messages.Add(new Message
+            {
+                MessageType = MessageType.Success,
+                Value = "Success"
+            });
+
+            return response;
+        }
+
+        [HttpPost]
+        [ActionName("UpdateRent")]
+        public Response<RentView> UpdateRent(RentView rent)
+        {
+
+            EntityFirstApp.Model.Rent mappedRent = Mapper.Map<EntityFirstApp.Model.Rent>(rent);
+
+            var entityRent = this.rentService.UpdateRent(mappedRent);
+
+            RentView rentView = Mapper.Map<RentView>(entityRent);
+
+            var response = new Response<RentView> { Model = rentView };
+
+            response.Messages.Add(new Message
+            {
+                MessageType = MessageType.Success,
+                Value = "Success"
+            });
+
+            return response;
+        }
+
     }
 }

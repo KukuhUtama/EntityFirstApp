@@ -8,32 +8,35 @@
 
                         <table ng-table="vm.rentsTable" class="table table-striped" show-filter="true">
                             <tr ng-repeat="rent in $data">
-                                <td data-title="'Id'" filter="{ Id: 'number'}">
+                                <td data-title="'Id'" filter="{ Id: 'number'}" class="col-md-1">
                                     {{rent.Id}}
                                 </td>
 
-                                <td data-title="'User Id'" filter="{ UserId: 'number'}">
+                                <td data-title="'User Id'" filter="{ UserId: 'number'}" class="col-md-1">
                                     {{rent.UserId}}
                                 </td>
-                                <td data-title="'Video Id'" filter="{ VideoId: 'number'}">
+                                <td data-title="'Video Id'" filter="{ VideoId: 'number'}" class="col-md-1">
                                     {{rent.VideoId}}
                                 </td>
 
-                                <td data-title="'Renting Price'" filter="{ RentingPrice: 'number'}">
+                                <td data-title="'Renting Price'" filter="{ RentingPrice: 'number'}" class="col-md-1">
                                     {{rent.RentPrice}}
                                 </td>
-                                <td data-title="'Renting Length'" filter="{ RentingLength: 'number'}">
+                                <td data-title="'Renting Length'" filter="{ RentingLength: 'number'}" class="col-md-1">
                                     {{rent.RentingLength}}
                                 </td>
-                                <td data-title="'Renting Cost'" filter="{ RentingCost: 'number'}">
+                                <td data-title="'Renting Cost'" filter="{ RentingCost: 'number'}" class="col-md-2">
                                     {{rent.RentingCost}}
                                 </td>
 
-                                <td data-title="'AddedDate'" filter="{ AddedDate: 'text'}">
+                                <td data-title="'AddedDate'" filter="{ AddedDate: 'text'}" class="col-md-2">
                                     {{rent.AddedDate}}
                                 </td>
-                                <td data-title="'ModifiedDate'" filter="{ ModifiedDate: 'text'}">
+                                <td data-title="'ModifiedDate'" filter="{ ModifiedDate: 'text'}" class="col-md-2">
                                     {{rent.ModifiedDate}}
+                                </td>
+                                <td data-title="'Action'" class="col-md-2">
+                                    <a href="" ng-click="vm.editRenting(rent.Id)">Edit</a> 
                                 </td>
                             </tr>
                         </table>

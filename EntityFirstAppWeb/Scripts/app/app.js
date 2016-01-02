@@ -60,7 +60,7 @@ app.config(function ($routeProvider) {
         templateUrl: "scripts/rent/views/ShowRent.html"
     });
 
-    $routeProvider.when("/EditRenting", {
+    $routeProvider.when("/EditRenting/:Id?", {
         controller: "editRentController",
         controllerAs: "vm",
         templateUrl: "scripts/rent/views/EditRent.html"

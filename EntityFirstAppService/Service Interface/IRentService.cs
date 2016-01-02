@@ -20,7 +20,7 @@ namespace EntityFirstAppService.Service_Interface
         /// </summary>
         /// <param name="id">The identifier.</param>
         /// <returns>Transport if found, null if the specified id is not found.</returns>
-        Rent GetRentById(Guid id);
+        Rent GetRentById(Int64 Id); 
 
         /// <summary>
         /// Add new Transport.
@@ -38,7 +38,7 @@ namespace EntityFirstAppService.Service_Interface
         /// Updates existing Rent.
         /// </summary>
         /// <param name="item">The Rent parameter.</param>
-        void UpdateRent(Rent item);
+        Rent UpdateRent(Rent item);
 
         /// <summary>
         /// Gets the transports by code.

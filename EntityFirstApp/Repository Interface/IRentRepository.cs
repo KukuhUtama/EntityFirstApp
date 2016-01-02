@@ -38,7 +38,7 @@ namespace EntityFirstApp.Repository_Interface
         /// Updates existing Rent.
         /// </summary>
         /// <param name="item">The Rent parameter.</param>
-        void UpdateRent(Rent item);
+        Rent UpdateRent(Rent item);
 
         /// <summary>
         /// Gets the transports by code.

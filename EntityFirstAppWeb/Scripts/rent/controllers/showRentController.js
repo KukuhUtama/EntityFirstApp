@@ -1,8 +1,8 @@
 ﻿rentModule.controller('showRentController', showRentController);
 
-showRentController.$inject = ['ngTableParams', 'rentService'];
+showRentController.$inject = ['$location', 'ngTableParams', 'rentService'];
 
-function showRentController(ngTableParams, rentService) {
+function showRentController($location, ngTableParams, rentService) {
     var vm = this;
     vm.rentsTable = new ngTableParams({
         page: 1,
@@ -28,4 +28,11 @@ function showRentController(ngTableParams, rentService) {
         }
     });
 
+    vm.editRenting = editRenting;
+
+    function editRenting(Id) {
+        var url = '/EditRenting/' + Id + '';
+        console.log(url);
+        $location.url(url);
+    }
 }

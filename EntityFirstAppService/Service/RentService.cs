@@ -22,14 +22,14 @@ namespace EntityFirstAppService.Service
             return rentRepository.GetAll();
         }
 
-        public Rent GetRentById(Guid id)
+        public Rent GetRentById(Int64 Id)
         {
-            throw new NotImplementedException();
+            return this.rentRepository.GetRentById(Id);
         }
 
         public Rent AddRent(Rent item)
         {
-            return rentRepository.AddRent(item);
+            return this.rentRepository.AddRent(item);
         }
 
         public void DeleteRent(Rent item)
@@ -37,9 +37,9 @@ namespace EntityFirstAppService.Service
             throw new NotImplementedException();
         }
 
-        public void UpdateRent(Rent item)
+        public Rent UpdateRent(Rent item)
         {
-            throw new NotImplementedException();
+            return this.rentRepository.UpdateRent(item);
         }
 
         public EntityFirstApp.Model.Rent GetRentByCode(string code)

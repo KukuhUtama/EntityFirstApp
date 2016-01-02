@@ -25,7 +25,9 @@ function commonEnum() {
             addVideo: '/video/addVideo',
             deleteVideo: '/video/deleteVideo',
             getAllRenting: '/rent/getAllRent',
-            addRenting: '/rent/addRent'
+            addRenting: '/rent/addRent',
+            getRentingById: '/rent/getRentById',
+            updateRenting: '/rent/updateRent'
         },
 
         modalUrl: {

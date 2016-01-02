@@ -40,7 +40,8 @@
                             <div class="form-group">
                                 <div class="col-sm-offset-1 col-sm-10">
                                     <button type="button" class="btn btn-primary" ng-click="vm.reset()">Reset</button> <span></span>
-                                    <button type="button" class="btn btn-primary" ng-click="vm.addRent()" ng-disabled="form.$invalid || vm.isNotVideoUserValid()">Add</button>
+                                    <button type="button" class="btn btn-primary" ng-click="vm.addRent()" ng-disabled="form.$invalid || vm.isNotVideoUserValid()" ng-hide="vm.isEditMode">Add</button>
+                                    <button type="button" class="btn btn-primary" ng-click="vm.updateRent()" ng-disabled="form.$invalid || vm.isNotVideoUserValid()" ng-show="vm.isEditMode">Save</button>
                                 </div>
                             </div>
                         </div>

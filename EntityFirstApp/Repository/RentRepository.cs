@@ -61,9 +61,11 @@ namespace EntityFirstApp.Repository
         /// Updates existing Rent.
         /// </summary>
         /// <param name="item">The Rent parameter.</param>
-        public void UpdateRent(Rent item)
+        public Rent UpdateRent(Rent item)
         {
-            
+            _context.Entry(item).State = System.Data.Entity.EntityState.Modified; 
+            _context.SaveChanges();
+            return GetRentById(item.Id);  
         }
 
      
