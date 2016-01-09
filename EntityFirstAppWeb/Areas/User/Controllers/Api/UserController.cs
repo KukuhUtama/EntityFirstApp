@@ -36,21 +36,31 @@ namespace EntityFirstAppWeb.Areas.User.Controllers.Api
         [ActionName("DeleteUser")]
         public Response<UserView> DeleteUser(Int64 Id)
         {
-            var entityUser = this._userService.GetUserById(Id);
-            this._userService.DeleteUser(Id);
-
-            UserView userView = Mapper.Map<UserView>(entityUser);
-
-            //// build response
-            var response = new Response<UserView> { Model = userView };
-
-            response.Messages.Add(new Message
+            if (this._userService.DeleteUser(Id) == true)
             {
-                MessageType = MessageType.Success,
-                Value = "Success"
-            });
+                //// build response
+                var response = new Response<UserView> { Model = { } };
+                response.Messages.Add(new Message
+                {
+                    MessageType = MessageType.Success,
+                    Value = "User Has Been Deleted"
+                });
 
-            return response;
+                return response;
+            }
+            else
+            {
+                //// build response
+                var response = new Response<UserView> { Model = { } };
+                response.Messages.Add(new Message
+                {
+                    MessageType = MessageType.Warning,
+                    Value = "User Has Reference(s) In Renting"
+                });
+
+                return response;
+            }
+        
         }
 
 

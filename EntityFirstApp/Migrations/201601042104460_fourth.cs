@@ -3,7 +3,7 @@ namespace EntityFirstApp.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class Fifth : DbMigration
+    public partial class fourth : DbMigration
     {
         public override void Up()
         {
@@ -19,7 +19,7 @@ namespace EntityFirstApp.Migrations
                         ModifiedDate = c.DateTime(nullable: false),
                     })
                 .PrimaryKey(t => t.Id)
-                .ForeignKey("dbo.Users", t => t.Id)
+                .ForeignKey("dbo.Users", t => t.Id, cascadeDelete: true)
                 .Index(t => t.Id);
             
             CreateTable(
@@ -48,7 +48,7 @@ namespace EntityFirstApp.Migrations
                         ModifiedDate = c.DateTime(nullable: false),
                     })
                 .PrimaryKey(t => t.Id)
-                .ForeignKey("dbo.Users", t => t.UserId, cascadeDelete: true)
+                .ForeignKey("dbo.Users", t => t.UserId)
                 .ForeignKey("dbo.Videos", t => t.VideoId, cascadeDelete: true)
                 .Index(t => t.VideoId)
                 .Index(t => t.UserId);
@@ -58,7 +58,7 @@ namespace EntityFirstApp.Migrations
                 c => new
                     {
                         Id = c.Long(nullable: false, identity: true),
-                        Tittle = c.String(nullable: false, maxLength: 25),
+                        Title = c.String(nullable: false, maxLength: 25),
                         Genre = c.String(nullable: false),
                         RentPrice = c.Int(nullable: false),
                         Count = c.Int(nullable: false),
@@ -72,9 +72,9 @@ namespace EntityFirstApp.Migrations
         
         public override void Down()
         {
-            DropForeignKey("dbo.UserProfiles", "Id", "dbo.Users");
             DropForeignKey("dbo.Rents", "VideoId", "dbo.Videos");
             DropForeignKey("dbo.Rents", "UserId", "dbo.Users");
+            DropForeignKey("dbo.UserProfiles", "Id", "dbo.Users");
             DropIndex("dbo.Rents", new[] { "UserId" });
             DropIndex("dbo.Rents", new[] { "VideoId" });
             DropIndex("dbo.UserProfiles", new[] { "Id" });

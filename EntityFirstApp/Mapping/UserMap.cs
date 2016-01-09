@@ -22,10 +22,12 @@ namespace EntityFirstApp.Mapping
             Property(t => t.AddedDate).IsRequired();
             Property(t => t.ModifiedDate).IsRequired();
       
-
             //Table  
             ToTable("Users");
 
+            //Relathionship
+            this.HasOptional(t => t.Profile).WithRequired(u => u.User).WillCascadeOnDelete(true);
+  
         }
     }
 }

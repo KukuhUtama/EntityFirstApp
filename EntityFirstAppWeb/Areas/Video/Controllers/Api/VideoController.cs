@@ -58,24 +58,29 @@ namespace EntityFirstAppWeb.Areas.Video.Controllers.Api
        [ActionName("DeleteVideo")]
        public Response<VideoView> DeleteVideo(Int64 Id)
        {
-           var entityVideo = this.videoService.GetVideoById(Id);
-           this.videoService.DeleteVideo(Id);
-
-           VideoView videoView = Mapper.Map<VideoView>(entityVideo);
-
-           //// build response
-           var response = new Response<VideoView> { Model = videoView };
-
-           response.Messages.Add(new Message
+           if (this.videoService.DeleteVideo(Id) == true)
            {
-               MessageType = MessageType.Success,
-               Value = "Success"
-           });
+               var response = new Response<VideoView> { Model = { } };
+               response.Messages.Add(new Message
+               {
+                   MessageType = MessageType.Success,
+                   Value = "Video Has Been Deleted"
+               });
 
-           return response;
+               return response;
+           }
+           else
+           {
+               var response = new Response<VideoView> { Model = { } };
+               response.Messages.Add(new Message
+               {
+                   MessageType = MessageType.Warning,
+                   Value = "Video Has Reference(s) In Renting"
+               });
+
+               return response;
+           }
        }
-
-
 
     }
 }

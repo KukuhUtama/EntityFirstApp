@@ -33,7 +33,7 @@ namespace EntityFirstAppService.Service_Interface
         /// Delete the User.
         /// </summary>
         /// <param name="item">The entity.</param>
-         void DeleteUser(Int64 Id); 
+         Boolean DeleteUser(Int64 Id); 
 
         /// <summary>
         /// Updates existing User.

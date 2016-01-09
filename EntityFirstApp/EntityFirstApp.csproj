@@ -64,15 +64,15 @@
     <Compile Include="IContext\IDataContext.cs" />
     <Compile Include="Mapping\RentMap.cs" />
     <Compile Include="Mapping\VideoMap.cs" />
-    <Compile Include="Migrations\201511291948061_Fifth.cs" />
-    <Compile Include="Migrations\201511291948061_Fifth.Designer.cs">
-      <DependentUpon>201511291948061_Fifth.cs</DependentUpon>
+    <Compile Include="Migrations\201601042104460_fourth.cs" />
+    <Compile Include="Migrations\201601042104460_fourth.Designer.cs">
+      <DependentUpon>201601042104460_fourth.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Model\BaseEntity.cs" />
     <Compile Include="Context\DBInitializer.cs" />
     <Compile Include="Mapping\ProfileMap.cs" />
     <Compile Include="Mapping\UserMap.cs" />
-    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Model\Profile.cs" />
     <Compile Include="Model\Program.cs" />
     <Compile Include="Model\Rent.cs" />
@@ -95,15 +95,15 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201511291948061_Fifth.resx">
-      <DependentUpon>201511291948061_Fifth.cs</DependentUpon>
-    </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="..\EntityFirstAppMisc\EntityFirstAppMisc.csproj">
       <Project>{888afc49-c6e4-411e-b5a9-2c33cb2c116c}</Project>
       <Name>EntityFirstAppMisc</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201601042104460_fourth.resx">
+      <DependentUpon>201601042104460_fourth.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

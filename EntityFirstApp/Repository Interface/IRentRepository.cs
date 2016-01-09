@@ -45,6 +45,7 @@ namespace EntityFirstApp.Repository_Interface
         /// </summary>
         /// <param name="code">The code identifier.</param>
         /// <returns>Rent if found, null if the specified code is not found.</returns>
-        Rent GetRentByCode(string code); 
+        Rent GetRentByCode(string code);
+
     }
 }

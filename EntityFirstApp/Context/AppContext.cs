@@ -23,7 +23,7 @@ namespace EntityFirstApp.Context
         }
         public AppContext(): base("name=EF_Context")
         {
-            
+            Database.SetInitializer<DbContextEF>(null);
         }
         public virtual void Commit()
         {

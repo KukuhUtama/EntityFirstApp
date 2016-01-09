@@ -88,5 +88,10 @@ namespace EntityFirstApp.Repository
         {
             return null;
         }
+
+        public Boolean IsUserHasRent(Int64 UserId)
+        {
+            return _context.Rents.Any(u => u.UserId == UserId);
+        }
     }
 }

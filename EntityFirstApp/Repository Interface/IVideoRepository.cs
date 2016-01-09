@@ -46,5 +46,7 @@ namespace EntityFirstApp.Repository_Interface
         /// <param name="code">The code identifier.</param>
         /// <returns>Video if found, null if the specified code is not found.</returns>
         Video GetVideoByCode(string code);
+
+        Boolean IsVideoHasRent(Int64 VideoId);
     }
 }

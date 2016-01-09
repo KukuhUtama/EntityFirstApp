@@ -32,7 +32,7 @@ namespace EntityFirstAppService.Service_Interface
         /// Delete the Video.
         /// </summary>
         /// <param name="item">The entity.</param>
-        void DeleteVideo(Int64 Id); 
+        Boolean DeleteVideo(Int64 Id); 
 
         /// <summary>
         /// Updates existing Video.

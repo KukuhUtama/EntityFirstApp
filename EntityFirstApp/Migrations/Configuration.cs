@@ -17,13 +17,33 @@ namespace EntityFirstApp.Migrations
         protected override void Seed(EntityFirstApp.DbContextEF context)
         {
             //  This method will be called after migrating to the latest version.
+
+            User firstUser = new User()
+            {
+                UserName = "Kukuh Utama",
+                Email = "kukuh2utama@gmail.com",
+                Password = "Mitrais",
+                AddedDate = new DateTime(2014, 1, 18),
+                ModifiedDate = new DateTime(2014, 1, 18),
+            };
+
+            User secondUser = new User()
+            {
+                UserName = "Valkriy",
+                Email = "kukuh2utama@gmail.com",
+                Password = "Free",
+                AddedDate = new DateTime(2014, 1, 18),
+                ModifiedDate = new DateTime(2014, 1, 18),
+            };
+
             Profile firstProfileUser = new Profile()
             {
                 FirstName = "First Profile",
                 LastName = "Azz",
                 Address = "Klaten",
                 AddedDate = new DateTime(2014, 1, 18),
-                ModifiedDate = new DateTime(2014, 1, 18)
+                ModifiedDate = new DateTime(2014, 1, 18),
+                User = firstUser
             };
 
             Profile secondProfileUser = new Profile() 
@@ -32,27 +52,11 @@ namespace EntityFirstApp.Migrations
                 LastName = "Azz",
                 Address = "Klaten",
                 AddedDate = new DateTime(2014, 1, 18),
-                ModifiedDate = new DateTime(2014, 1, 18)
-            };
-
-            User firstUser = new User(){ 
-                UserName = "Kukuh Utama", 
-                Email = "kukuh2utama@gmail.com", 
-                Password = "Mitrais", 
-                AddedDate = new DateTime(2014, 1, 18),
                 ModifiedDate = new DateTime(2014, 1, 18),
-                Profile = firstProfileUser
+                User = secondUser
             };
 
-            User secondUser = new User() {
-                UserName = "Valkriy", 
-                Email = "kukuh2utama@gmail.com", 
-                Password = "Free", 
-                AddedDate = new DateTime(2014, 1, 18), 
-                ModifiedDate = new DateTime(2014, 1, 18),
-                Profile = secondProfileUser
-            };
-
+         
             Video firstVideo = new Video()
             {
                Title = "Mengejar Matahari",
@@ -114,14 +118,18 @@ namespace EntityFirstApp.Migrations
                 ModifiedDate = new DateTime(2015, 1, 18),
             };
 
-            
             context.Users.AddOrUpdate(u => u.Id, firstUser);
             context.Profiles.AddOrUpdate(u => u.Id, firstProfileUser);
+          
             context.Users.AddOrUpdate(u => u.Id, secondUser);
+            context.Profiles.AddOrUpdate(u => u.Id, secondProfileUser);
+
             context.Videos.AddOrUpdate(u => u.Id, firstVideo);
             context.Videos.AddOrUpdate(u => u.Id, secondVideo);
+
             context.Rents.AddOrUpdate(u => u.Id, firstRent);
             context.Rents.AddOrUpdate(u => u.Id, secondRent);
+           
         }
     }
 }

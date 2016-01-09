@@ -47,5 +47,7 @@ namespace EntityFirstApp.Repository_Interface
         /// <param name="code">The code identifier.</param>
         /// <returns>User if found, null if the specified code is not found.</returns>
         User GetUserByCode(string code);
+
+        Boolean IsUserHasRent(Int64 UserId);
     }
 }

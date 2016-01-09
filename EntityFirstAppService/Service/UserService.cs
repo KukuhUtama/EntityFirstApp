@@ -52,9 +52,17 @@ namespace EntityFirstAppService.Service
         /// Delete the User.
         /// </summary>
         /// <param name="item">The entity.</param>
-        public void DeleteUser(Int64 Id)
+        public Boolean DeleteUser(Int64 Id)
         {
-            this.userRepository.DeleteUser(Id);
+            if (this.userRepository.IsUserHasRent(Id) == true)
+            {
+                return false;
+            }
+            else
+            {
+                this.userRepository.DeleteUser(Id);
+                return true;
+            }
         }
 
         /// <summary>

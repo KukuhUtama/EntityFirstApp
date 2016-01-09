@@ -15,11 +15,23 @@ function confirmationModalController($rootScope, $scope, $modalInstance, Id, ser
         console.log(serviceName);
         if (serviceName == 'userService') {
             userService.deleteUser($scope.Data).then(onSuccessDeleteUser, onFailedDeleteUser);
-            console.log("is here");
+            
             function onSuccessDeleteUser(result) {
-                $modalInstance.dismiss('this is result for dismiss');
-                toastr.success('Delete User Success');
-                $rootScope.$broadcast('userTableEvent', {});
+                console.log(result);
+                if (result.Messages[0].MessageType == 1) {
+                     $modalInstance.dismiss('this is result for dismiss');
+                     toastr.success(result.Messages[0].Value);
+                     $rootScope.$broadcast('userTableEvent', {});
+
+                } else if (result.Messages[0].MessageType == 2) {
+                     $modalInstance.dismiss('this is result for dismiss');
+                     toastr.warning(result.Messages[0].Value);
+
+                } else {
+                    toastr.warning(result.Messages[0].Value);
+
+                }
+            
             }
 
             function onFailedDeleteUser(errorMessage) {
@@ -31,9 +43,20 @@ function confirmationModalController($rootScope, $scope, $modalInstance, Id, ser
             videoService.deleteVideo($scope.Data).then(onSuccessDeleteVideo, onFailedDeleteVideo);
 
             function onSuccessDeleteVideo(result) {
-                $modalInstance.dismiss('this is result for dismiss');
-                toastr.success('Delete Video Success');
-                $rootScope.$broadcast('videoTableEvent', {});
+                if (result.Messages[0].MessageType == 1) {
+                    $modalInstance.dismiss('this is result for dismiss');
+                    toastr.success(result.Messages[0].Value);
+                    $rootScope.$broadcast('videoTableEvent', {});
+
+                } else if (result.Messages[0].MessageType == 2) {
+                    $modalInstance.dismiss('this is result for dismiss');
+                    toastr.warning(result.Messages[0].Value);
+
+                } else {
+                    toastr.warning(result.Messages[0].Value);
+
+                }
+                
             }
 
             function onFailedDeleteVideo(errorMessage) {
@@ -52,6 +75,6 @@ function confirmationModalController($rootScope, $scope, $modalInstance, Id, ser
     function Cancel() {
         $modalInstance.dismiss('this is result for dismiss');
     }
-    console.log(Id);
+
     console.log("confirmationModalController");
 }

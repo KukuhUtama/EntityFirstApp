@@ -34,9 +34,17 @@ namespace EntityFirstAppService.Service
             return videoRepository.AddVideo(item);
         }
 
-        public void DeleteVideo(Int64 Id)
+        public Boolean DeleteVideo(Int64 Id)
         {
-            videoRepository.DeleteVideo(Id);
+            if (this.videoRepository.IsVideoHasRent(Id) == true)
+            {
+                return false;
+            }
+            else
+            {
+                videoRepository.DeleteVideo(Id);
+                return true;
+            }
         }
 
         public void UpdateVideo(Video item)

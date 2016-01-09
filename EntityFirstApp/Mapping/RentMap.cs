@@ -22,15 +22,16 @@ namespace EntityFirstApp.Mapping
             Property(t => t.AddedDate).IsRequired();
             Property(t => t.ModifiedDate).IsRequired();
 
-            Property(t => t.VideoId).IsRequired();
-            Property(t => t.UserId).IsRequired();
+
+            Property(t => t.VideoId);
+            Property(t => t.UserId);
 
             //Table  
             ToTable("Rents");
 
             //Relationship
-            this.HasRequired(t => t.Video).WithMany(t => t.Rents).HasForeignKey(t => t.VideoId);
-            this.HasRequired(t => t.User).WithMany(t => t.Rents).HasForeignKey(t => t.UserId);
+            this.HasRequired(t => t.Video).WithMany(t => t.Rents).HasForeignKey(t => t.VideoId).WillCascadeOnDelete(true);
+            this.HasRequired(t => t.User).WithMany(t => t.Rents).HasForeignKey(t => t.UserId).WillCascadeOnDelete(false);
         }
     }
 }

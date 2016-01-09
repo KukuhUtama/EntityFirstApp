@@ -85,5 +85,10 @@ namespace EntityFirstApp.Repository
         {
             return null;
         }
+
+        public Boolean IsVideoHasRent(Int64 VideoId)
+        {
+            return _context.Rents.Any(v => v.VideoId == VideoId);
+        }
     }
 }

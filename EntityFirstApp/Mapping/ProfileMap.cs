@@ -23,12 +23,12 @@ namespace EntityFirstApp.Mapping
             this.Property(t => t.AddedDate);
             this.Property(t => t.ModifiedDate);
          
-
             //table  
             ToTable("UserProfiles");
 
             //Relationship
-            this.HasRequired(t => t.User).WithRequiredDependent(u => u.Profile);
+            //this.HasRequired(t => t.User).WithRequiredDependent(u => u.Profile);
+
         }
     }
 }
