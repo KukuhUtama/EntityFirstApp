@@ -17,8 +17,8 @@ function confirmationModalController($rootScope, $scope, $modalInstance, Id, ser
             userService.deleteUser($scope.Data).then(onSuccessDeleteUser, onFailedDeleteUser);
             
             function onSuccessDeleteUser(result) {
-                console.log(result);
-                if (result.Messages[0].MessageType == 1) {
+               
+                if (result.Messages[0].MessageType == 0) {
                      $modalInstance.dismiss('this is result for dismiss');
                      toastr.success(result.Messages[0].Value);
                      $rootScope.$broadcast('userTableEvent', {});
@@ -41,14 +41,18 @@ function confirmationModalController($rootScope, $scope, $modalInstance, Id, ser
         }
         else if(serviceName =='videoService') {
             videoService.deleteVideo($scope.Data).then(onSuccessDeleteVideo, onFailedDeleteVideo);
+            
 
             function onSuccessDeleteVideo(result) {
-                if (result.Messages[0].MessageType == 1) {
+            
+                if (result.Messages[0].MessageType == 0) {
                     $modalInstance.dismiss('this is result for dismiss');
                     toastr.success(result.Messages[0].Value);
                     $rootScope.$broadcast('videoTableEvent', {});
+                    console.log("Success");
 
                 } else if (result.Messages[0].MessageType == 2) {
+                    console.log("Warning");
                     $modalInstance.dismiss('this is result for dismiss');
                     toastr.warning(result.Messages[0].Value);
 
